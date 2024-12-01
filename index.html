@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My People</title>
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
@@ -109,16 +110,26 @@
         </aside>
         <main>
             <header>
+                <form action="" class="search-form">
+                    <input type="search" name="q" id="q" class="form-control fp-inp">
+                    <button class="btn btn-sky">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.21875 6.46875C2.80208 7.05208 3.51042 7.34375 4.34375 7.34375C5.17708 7.34375 5.88542 7.05208 6.46875 6.46875C7.05208 5.88542 7.34375 5.17708 7.34375 4.34375C7.34375 3.51042 7.05208 2.80208 6.46875 2.21875C5.88542 1.63542 5.17708 1.34375 4.34375 1.34375C3.51042 1.34375 2.80208 1.63542 2.21875 2.21875C1.63542 2.80208 1.34375 3.51042 1.34375 4.34375C1.34375 5.17708 1.63542 5.88542 2.21875 6.46875ZM8.34375 7.34375L11.6562 10.6562L10.6562 11.6562L7.34375 8.34375V7.8125L7.15625 7.625C6.36458 8.3125 5.42708 8.65625 4.34375 8.65625C3.13542 8.65625 2.10417 8.23958 1.25 7.40625C0.416667 6.57292 0 5.55208 0 4.34375C0 3.13542 0.416667 2.11458 1.25 1.28125C2.10417 0.427083 3.13542 0 4.34375 0C5.55208 0 6.57292 0.427083 7.40625 1.28125C8.23958 2.11458 8.65625 3.13542 8.65625 4.34375C8.65625 4.78125 8.55208 5.28125 8.34375 5.84375C8.13542 6.38542 7.89583 6.82292 7.625 7.15625L7.8125 7.34375H8.34375Z"
+                                fill="#150F36" />
+                        </svg>
+                    </button>
+                </form>
                 <div class="container">
-                    <div class="px-xl-5 d-flex align-items-center gap-3 py-3 justify-content-between">
-                        <div class="d-flex align-items-center gap-3">
+                    <div class="px-xl-5 d-flex align-items-center gap-3 py-3 flex-wrap justify-content-between">
+                        <div class="d-flex align-items-center gap-lg-3 gap-2">
                             <button class="btn btn-white menu-btn" id="menu-btn" onclick="toggleMenu()">
                                 <img src="./assets/img/menu-bars.svg" alt="Menu" class="bars-icon">
                             </button>
                             <h2 class="page-title grostek">Dashboard</h2>
                         </div>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-lg-4 gap-2 ms-auto">
+                            <div class="d-flex align-items-center gap-sm-2 gap-0">
                                 <div class="header-search">
                                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -137,7 +148,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="d-flex align-items-center gap-3">
+                            <div class="d-flex align-items-center gap-sm-3 gap-2">
                                 <a href="#" class="btn btn-white">
                                     <div class="btn-flex">
                                         <span>
@@ -169,9 +180,71 @@
                     </div>
                 </div>
             </header>
+            <section class="main-sec py-4 d-flex flex-column">
+                <div class="container d-flex flex-column justify-content-between flex-grow-1">
+                    <div class="px-xl-5 gap-4 py-sm-2 d-flex flex-column justify-content-between flex-grow-1">
+                        <div class="d-flex align-items-center wallet-flex grostek">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.4219 8.89844C10.6823 9.13281 10.9818 9.25 11.3203 9.25C11.6589 9.25 11.9453 9.13281 12.1797 8.89844C12.4401 8.66406 12.5703 8.36458 12.5703 8C12.5703 7.63542 12.4401 7.33594 12.1797 7.10156C11.9453 6.86719 11.6589 6.75 11.3203 6.75C10.9818 6.75 10.6823 6.86719 10.4219 7.10156C10.1875 7.33594 10.0703 7.63542 10.0703 8C10.0703 8.36458 10.1875 8.66406 10.4219 8.89844ZM8 11.3203V4.67969H16.3203V11.3203H8ZM15.5 13V13.8203C15.5 14.263 15.3307 14.6536 14.9922 14.9922C14.6536 15.3307 14.263 15.5 13.8203 15.5H2.17969C1.71094 15.5 1.30729 15.3438 0.96875 15.0312C0.65625 14.6927 0.5 14.2891 0.5 13.8203V2.17969C0.5 1.71094 0.65625 1.32031 0.96875 1.00781C1.30729 0.669271 1.71094 0.5 2.17969 0.5H13.8203C14.263 0.5 14.6536 0.669271 14.9922 1.00781C15.3307 1.34635 15.5 1.73698 15.5 2.17969V3H8C7.53125 3 7.1276 3.16927 6.78906 3.50781C6.47656 3.82031 6.32031 4.21094 6.32031 4.67969V11.3203C6.32031 11.7891 6.47656 12.1927 6.78906 12.5312C7.1276 12.8438 7.53125 13 8 13H15.5Z"
+                                    fill="#150F36" />
+                            </svg>
+                            <span class="wf-muted">No wallet connected</span>
+                        </div>
+                        <div class="d-flex flex-column gap-5 align-items-center my-auto text-center nothing-flex">
+                            <img src="./assets/img/Circles.svg" alt="Circle" class="nothing-circles">
+                            <div class="d-flex flex-column gap-2 text-dark">
+                                <h5 class="fw-medium nothing-title mb-0 grostek">Nothing to show</h5>
+                                <p class="mb-0 nothing-desc">Connect your wallet and Instagram to start.</p>
+                            </div>
+                            <a href="./connect-wallet.html" class="btn btn-form-primary">
+                                <div class="d-flex align-items-center justify-content-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.74609 12.2539C4.94141 13.4258 6.35938 14.0117 8 14.0117C9.64062 14.0117 11.0469 13.4258 12.2188 12.2539C13.4141 11.0586 14.0117 9.64062 14.0117 8C14.0117 6.35937 13.4141 4.95312 12.2188 3.78125C11.0469 2.58594 9.64062 1.98828 8 1.98828C6.35938 1.98828 4.94141 2.58594 3.74609 3.78125C2.57422 4.95312 1.98828 6.35937 1.98828 8C1.98828 9.64062 2.57422 11.0586 3.74609 12.2539ZM2.69141 2.72656C4.16797 1.25 5.9375 0.511719 8 0.511719C10.0625 0.511719 11.8203 1.25 13.2734 2.72656C14.75 4.17969 15.4883 5.9375 15.4883 8C15.4883 10.0625 14.75 11.832 13.2734 13.3086C11.8203 14.7617 10.0625 15.4883 8 15.4883C5.9375 15.4883 4.16797 14.7617 2.69141 13.3086C1.23828 11.832 0.511719 10.0625 0.511719 8C0.511719 5.9375 1.23828 4.17969 2.69141 2.72656ZM8.73828 4.23828V7.26172H11.7617V8.73828H8.73828V11.7617H7.26172V8.73828H4.23828V7.26172H7.26172V4.23828H8.73828Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span>Create Account</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <div class="px-xl-5 d-flex align-items-center gap-3 py-3 flex-wrap justify-content-between">
+                        <div class="d-flex align-items-center gap-lg-4 gap-2">
+                            <div class="d-flex align-items-center f-lang-flex me-2">
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4375 10.5938C12.375 9.59375 12.8438 8.39583 12.8438 7C12.8438 5.89583 12.5312 4.89583 11.9062 4C11.3021 3.10417 10.5 2.45833 9.5 2.0625V2.34375C9.5 2.69792 9.36458 3.01042 9.09375 3.28125C8.82292 3.53125 8.51042 3.65625 8.15625 3.65625H6.84375V5C6.84375 5.1875 6.77083 5.34375 6.625 5.46875C6.5 5.59375 6.34375 5.65625 6.15625 5.65625H4.84375V7H8.84375C9.03125 7 9.1875 7.0625 9.3125 7.1875C9.4375 7.3125 9.5 7.46875 9.5 7.65625V9.65625H10.1562C10.7812 9.65625 11.2083 9.96875 11.4375 10.5938ZM6.84375 12.2812V11C6.48958 11 6.17708 10.8646 5.90625 10.5938C5.63542 10.3229 5.5 10.0104 5.5 9.65625V9L2.3125 5.8125C2.20833 6.22917 2.15625 6.625 2.15625 7C2.15625 8.35417 2.60417 9.53125 3.5 10.5312C4.41667 11.5312 5.53125 12.1146 6.84375 12.2812ZM2.78125 2.3125C4.09375 1 5.66667 0.34375 7.5 0.34375C9.33333 0.34375 10.8958 1 12.1875 2.3125C13.5 3.60417 14.1562 5.16667 14.1562 7C14.1562 8.83333 13.5 10.4062 12.1875 11.7188C10.8958 13.0104 9.33333 13.6562 7.5 13.6562C5.66667 13.6562 4.09375 13.0104 2.78125 11.7188C1.48958 10.4062 0.84375 8.83333 0.84375 7C0.84375 5.16667 1.48958 3.60417 2.78125 2.3125Z"
+                                        fill="#150F36" />
+                                </svg>
+                                <a href="#" class="f-text text-decoration-none fw-bold">English</a>
+                            </div>
+                            <a href="#" class="f-text text-decoration-none fw-bold">Privacy Policy</a>
+                        </div>
+                        <div class="d-flex align-items-center f-currency-flex">
+                            <label class="f-text text-decoration-none fw-bold" for="currency">English</label>
+                            <select name="currency" id="currency" class="currency-inp">
+                                <option value="USD">USD</option>
+                                <option value="WON">WON</option>
+                                <option value="JPY">JPY</option>
+                                <option value="GBP">GBP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="ETH">ETH</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </main>
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
         <script src="./assets/js/custom.js"></script>
     </body>
 
