@@ -47,11 +47,60 @@ $(document).ready(function () {
             hideSearchForm();
         }
     });
-    if($('.currency-inp')){
+    if ($('.currency-inp')) {
         $('.currency-inp').select2({
             containerCssClass: 'curr-container',
             dropdownCssClass: 'curr-dropdown', // Custom class for the dropdown container
             minimumResultsForSearch: Infinity // Hides the search input
+        });
+    }
+
+    // Dashboard carousel
+
+    if ($('.new-drops-slider').length) {
+        $('.new-drops-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: `<span class="slick-arrow slick-prev"><svg width="72" height="34" viewBox="0 0 72 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="70" height="32" rx="1" fill="#150F36"/>
+<rect x="1" y="1" width="70" height="32" rx="1" stroke="white" stroke-linecap="square"/>
+<path d="M35.2812 13.9702L32.2188 17.0327L35.2812 20.0952L34.3438 21.0327L30.3438 17.0327L34.3438 13.0327L35.2812 13.9702Z" fill="white"/>
+</svg>
+`,
+            nextArrow: `<span class="slick-arrow slick-next"><svg width="72" height="34" viewBox="0 0 72 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="70" height="32" rx="1" fill="#150F36"/>
+<rect x="1" y="1" width="70" height="32" rx="1" stroke="white" stroke-linecap="square"/>
+<path d="M30.7188 13.9702L33.7812 17.0327L30.7188 20.0952L31.6562 21.0327L35.6562 17.0327L31.6562 13.0327L30.7188 13.9702Z" fill="white"/>
+</svg>
+`,
+            draggable: true,
+            responsive: [
+                {
+                    breakpoint: 992, // lg breakpoint
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768, // md breakpoint
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }
+
+    if ($('.main-table').length) {
+        $('.main-table').DataTable({
+            paging: false,           // Disable pagination
+            searching: false,        // Disable search box
+            info: false,             // Disable info text ("Showing X of Y entries")
+            ordering: true,          // Enable column sorting
+            lengthChange: false,     // Disable min/max results dropdown
+            language: {
+                emptyTable: "No data available in table" // Optional: Custom empty table message
+            }
         });
     }
 });

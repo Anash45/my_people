@@ -559,48 +559,181 @@ body {
 /* Form Pages End */
 
 /* Dashboard Pages */
-.wallet-flex{
-    gap: 2px;
+.wallet-flex {
+    gap: 4px;
     font-weight: 500;
     font-size: 20px;
     color: #150F36;
 }
 
-.wf-muted{
+.wf-muted {
     color: #5F646D;
 }
-.nothing-circles{
+
+.nothing-circles {
     width: 205px;
     max-width: 100%;
 }
-.nothing-flex .btn-form-primary{
+
+.nothing-flex .btn-form-primary {
     padding: 16px 20px !important;
     border: 1px solid #150F36 !important;
     border-radius: 2px !important;
     width: 210px !important;
     max-width: 100% !important;
 }
-.nothing-title{
+
+.nothing-title {
     font-size: 48px;
 }
-.nothing-desc{
+
+.nothing-desc {
     font-size: 16px;
 }
 
-.nothing-desc{
+.nothing-desc {
     font-size: 16px;
 }
-.text-dark{
+
+.text-dark {
     color: #150F36 !important;
+}
+
+.form-select {
+    background-image: url(../img/chevron-down.svg);
+}
+
+.new-drop-img img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.new-drop-card {
+    position: relative;
+    border: 1px solid #150F36;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.new-drop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    height: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0.6213));
+}
+
+.new-drop-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.new-drop-desc {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.new-drop-posts {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #150F36;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.new-drop-cont {
+    padding: 0 10px;
+}
+
+.new-drops-slider .slick-list {
+    margin: 0 -10px;
+}
+
+.new-drops-slider .slick-slide>div {
+    display: flex;
+}
+
+.new-drops-slider {
+    position: relative;
+}
+
+.new-drops-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    height: unset;
+    width: unset;
+    z-index: 1;
+}
+
+.new-drops-slider .slick-arrow::before {
+    content: unset;
+}
+
+.new-drops-slider .slick-arrow.slick-prev {
+    left: 0px;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.new-drops-slider .slick-arrow.slick-next {
+    right: 0px;
+    transform: translateY(-50%) translateX(50%);
+}
+
+.btn-nav{
+    padding: 6px 10px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+.types-nav .btn-nav{
+    padding: 6px 16px !important;
+}
+.btn-nav:hover,.btn-nav.active{
+    border-color: #150F36 !important;
+    background-color: #150F36 !important;
+    color: #FFFFFF !important;
+}
+.types-nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-table thead th{
+    font-size: 12px !important;
+}
+.main-table{
+    border: 1px solid #150F36;
+}
+.main-table tbody td{
+    font-size: 14px !important;
 }
 /* Dashboard Pages End */
 
-@media (min-height: 1200px) {}
 
 @media (min-height: 1200px) {
     .form-page main {
         min-height: unset;
         gap: 60px;
+    }
+}
+@media (max-width: 1200px) {
+    .new-drops-slider .slick-arrow.slick-prev {
+        transform: translateY(-50%) translateX(-20%);
+    }
+    
+    .new-drops-slider .slick-arrow.slick-next {
+        transform: translateY(-50%) translateX(20%);
     }
 }
 
@@ -645,6 +778,10 @@ body {
     }
 }
 
+@media (max-width:768px) {
+
+}
+
 @media (max-width:576px) {
     .form-page {
         background-size: cover;
@@ -653,12 +790,14 @@ body {
     .form-container {
         width: 100% !important;
     }
-    .menu-btn{
+
+    .menu-btn {
         width: 32px;
         height: 32px;
         padding: 0 !important;
     }
-    .nothing-title{
+
+    .nothing-title {
         font-size: 36px;
     }
 }
