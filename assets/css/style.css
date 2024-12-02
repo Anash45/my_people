@@ -55,10 +55,11 @@ body {
 }
 
 .nav-link.active {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
 }
 
 .nav-link:hover {
+    color: #FFFFFF !important;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -181,7 +182,9 @@ body {
 .btn-sky:hover {
     background-color: #150F36 !important;
 }
-
+.btn-sky:hover svg path {
+    fill: #FFFFFF;
+}
 .btn-flex {
     display: flex;
     align-items: center;
@@ -442,13 +445,17 @@ body {
 .dashboard-page header {
     position: sticky;
     top: 0;
+    z-index: 9;
+}
+
+body:not(.form-page) header{
     background-color: #fff;
     border-bottom: 1px solid #150F36;
 }
 
 .search-form {
     position: absolute;
-    top: 80px;
+    top: 16px;
     width: 1000px;
     max-width: calc(100% - 50px);
     z-index: 9;
@@ -507,9 +514,9 @@ body {
     height: 100%;
     background-image: url(../img/chevron-up.svg);
     background-position: center;
-    background-size: 12px;
+    background-size: 10px;
     background-repeat: no-repeat;
-    right: 12px !important;
+    right: 6px !important;
     transition: 0.3s ease-in-out;
     transform: rotate(180deg);
 }
@@ -548,8 +555,12 @@ body {
 .currency-inp~span .select2-selection--single {
     height: 32px !important;
     border: 1px solid #150F36 !important;
-    width: 132px;
+    min-width: 132px;
     border-radius: 1px !important;
+}
+
+.dash-duration-flex .currency-inp~span .select2-selection--single{
+    min-width: 100px;
 }
 
 .dashboard-page .main-sec {
@@ -599,10 +610,16 @@ body {
     color: #150F36 !important;
 }
 
+.text-secondary {
+    color: #5F646D !important;
+}
+
 .form-select {
     background-image: url(../img/chevron-down.svg);
 }
-
+.new-drop-img{
+    width: 100%;
+}
 .new-drop-img img {
     height: 140px;
     width: 100%;
@@ -610,6 +627,8 @@ body {
 }
 
 .new-drop-card {
+    width: 100%;
+    display: block;
     position: relative;
     border: 1px solid #150F36;
     border-radius: 2px;
@@ -690,36 +709,494 @@ body {
     transform: translateY(-50%) translateX(50%);
 }
 
-.btn-nav{
+.btn-nav {
     padding: 6px 10px !important;
     background-color: transparent !important;
     border-color: transparent !important;
 }
-.types-nav .btn-nav{
+
+.types-nav .btn-nav {
     padding: 6px 16px !important;
 }
-.btn-nav:hover,.btn-nav.active{
+
+.btn-nav:hover,
+.btn-nav.active {
     border-color: #150F36 !important;
     background-color: #150F36 !important;
     color: #FFFFFF !important;
 }
-.types-nav{
+
+.types-nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-.main-table thead th{
+.main-table thead th {
     font-size: 12px !important;
 }
-.main-table{
+
+.main-table {
     border: 1px solid #150F36;
 }
-.main-table tbody td{
+
+.main-table tbody td {
     font-size: 14px !important;
+}
+
+.main-table .dt-column-title {
+    position: relative;
+}
+
+.main-table .dt-column-title::after {
+    content: "";
+    height: 16px !important;
+    width: 16px !important;
+    display: inline-block;
+    position: absolute !important;
+    top: 50% !important;
+    right: 0;
+    transform: translateX(calc(100% + 6px)) translateY(-50%) !important;
+    background-image: url(../img/arrow-down.svg);
+    background-size: cover;
+    vertical-align: middle;
+    transition: 0.3s ease-in-out;
+    opacity: 0.5;
+}
+
+.main-table th {
+    padding: 14px 20px !important;
+}
+
+.main-table td {
+    padding: 14px 10px !important;
+    color: #150F36;
+    vertical-align: middle;
+}
+
+.main-table th.dt-orderable-asc:hover,
+.main-table th.dt-orderable-desc:hover {
+    outline: 0 !important;
+}
+
+.main-table .dt-column-order {
+    display: none !important;
+}
+
+.main-table .dt-column-order::after,
+.main-table .dt-column-order::before {
+    content: unset !important;
+    display: none !important;
+}
+
+.main-table thead th:last-child .dt-column-title::after {
+    display: none !important;
+}
+
+.main-table thead th.dt-ordering-desc .dt-column-title::after {
+    transform: translateX(calc(100% + 6px)) translateY(-50%) rotate(-180deg) !important;
+    opacity: 1;
+}
+
+.main-table thead th.dt-ordering-asc .dt-column-title::after {
+    opacity: 1;
+    transform: translateX(calc(100% + 6px)) translateY(-50%) rotate(0deg) !important;
+}
+
+.btn-table {
+    padding: 6px 10px !important;
+}
+.btn-filters{
+    color: #150F36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 13px !important;
+}
+
+.tsc-label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 700;
+    color: #150F36;
+    gap: 6px;
+}
+
+.tsc-label{
+    margin: 0 2px;
+}
+.table-search-cont{
+    position: relative;
+}
+.tsc-inp{
+    font-size: 12px;
+    font-weight: 700;
+    color: #150F36;
+    text-align: center;
+    width: 226px;
+    border: 1px solid #150F36;
+    border-radius: 1px;
+    background-color: #FAF4F0 !important;
+    box-shadow: none !important;
+
+}
+
+.created-table{
+    border-width: 2px;
+    border-radius: 2px !important;
+}
+
+.filters-cont{
+    gap: 16px;
+}
+.filters-applied .btn-filters{
+    background-color: #00A3FF;
+}
+
+.tsc-inp:focus ~ .tsc-label,
+.tsc-inp:not(:placeholder-shown) ~ .tsc-label {
+    display: none !important;
+}
+.text-accent {
+    color: #28BF4B;
+}
+
+.mt-nft-img {
+    height: 40px;
+    width: 58px;
+    border-radius: 1px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #150F36;
+}
+.dt-layout-table{
+    overflow-x: auto;
+}
+.dt-container .row:not(.dt-layout-table){
+    display: none !important;
+}
+.nft-sq-card .new-drop-img img{
+    aspect-ratio: 235/217;
+    height: auto;
+    width: 100%;
+}
+
+.nft-sq-card .new-drop-info{
+    height: 50%;
+}
+
+.nft-sq-row,.nft-posts-row{
+    margin: 0 -10px;
+}
+
+.nft-sq-row>div,.nft-posts-row>div{
+    padding: 0 10px;
+}
+.pagination-text{
+    font-size: 12px;
+}
+.btn-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #FAF4F0;
+}
+.collections-overview-about{
+    display: flex;
+    flex-direction: column;
+}
+.coa-header{
+    position: relative;
+}
+
+.coa-content{
+    padding: 32px 25px 25px;
+}
+
+.coa-cover-img{
+    height: 156px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.coa-profile-img{
+    left: 24px;
+    bottom: -12px;
+    position: absolute;
+    height: 71px;
+    width: 71px;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #150F36;
+}
+.coa-user-img{
+    height: 33px;
+    width: 33px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100px;
+}
+.text-sm{
+    font-size: 12px;
+}
+
+.coa-line{
+    width: 1px;
+    height: 16px;
+    background-color: rgba(95, 100, 109, 0.3);
+}
+
+.btn-read-more{
+    padding: 2px 13px !important;
+    border-radius: 2px !important;
+}
+
+.btn-read-more:hover{
+    background-color: #D8D8D8;
+}
+.coa-nav .btn{
+    border-color: transparent !important;
+    border-radius: 2px !important;
+    padding: 6px 30px !important;
+}
+
+.coa-nav .btn.active{
+    border-color: #150F36 !important;
+    background-color: #150F36 !important;
+    color: #fff !important;
+}
+
+.nft-card .new-drop-desc{
+    font-weight: 500;
+}
+.btn-dark{
+    border-color: #150F36 !important;
+    background-color: #150F36 !important;
+}
+
+.text-md{
+    font-size: 16px;
+}
+
+.trading-stat{
+    padding: 10px 16px;
+    position: relative;
+    border: 1px solid #150F36;
+    border-radius: 1px;
+}
+.ts-info{
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}
+
+.text-danger{
+    color: #DE4646;
+}
+.text-primary{
+    color: #00A3FF !important;
+}
+.static-search-form{
+    position: relative;
+    left: unset;
+    top: unset;
+    width: 100%;
+    transform: unset;
+    z-index: 0;
+    max-width: 100%;
+    display: block !important;
+}
+
+.static-search-form .fp-ip{
+    font-size: 16px !important;
+}
+
+.static-search-form .fp-inp::placeholder{
+    color: #150F36;
+}
+.search-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #150F36;
+}
+.nft-sq-row .nft-card{
+    width: 100%;
+}
+.search-card{
+    display: block;
+    text-decoration: none;
+}
+.search-card .nci-label{
+    font-size: 12px;
+}
+
+.search-card .nci-value{
+    font-size: 14px;
+}
+
+.search-card .nc-title{
+    font-size: 14px;
+}
+.btn-load-more{
+    padding: 6px 16px !important;
+}
+
+.btn-sold{
+    background-color: #DE4646 !important;
+    color: #FFFFFF !important;
+    border-color: #DE4646 !important;
+}
+
+.btn-purchased{
+    background-color: #28BF4B !important;
+    color: #FFFFFF !important;
+    border-color: #28BF4B !important;
+}
+
+
+.btn-accepted{
+    background-color: #EAFBEE !important;
+    color: #28BF4B !important;
+    border-color: #28BF4B !important;
+}
+
+.btn-table{
+    min-width: 72px !important;
 }
 /* Dashboard Pages End */
 
+/* Homepage */
+.home-page main{
+    width: 100%;
+}
+.nft-post{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+.nft-post-img{
+    border-radius: 2px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.nft-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.np-title{
+    font-family: "Space Grostek", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #150F36;
+}
+.np-price{
+    font-size: 12px;
+    font-weight: 600;
+    color: #150F36;
+}
+
+.nft-post{
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+.posts-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.np-tag{
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #150F36;
+    position: absolute;
+    padding: 3px 8px;
+    top: 40px;
+    right: 40px;
+}
+.home-posts-box{
+    padding: 32px 32px 12px;
+    background-image: url(../img/home-box-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.home-posts-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.btn-home{
+    border: 1px solid #fff !important;
+    background-color: #150F36 !important;
+    color: #FFFFFF !important;
+    padding: 9px 15px !important;
+    line-height: 100% !important;
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.25);
+}
+
+.home-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nft-categories{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nft-categories .nft-sq-card{
+    flex-basis: 170px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: 190px;
+}
+
+.blog-post{
+    padding: 0 !important;
+    box-shadow: none;
+    height: 100%;
+}
+
+.blog-post .nft-post-img{
+    aspect-ratio: 16/9;
+}
+
+.blog-post .nft-bottom{
+    padding: 0 20px 20px;
+}
+.blog-posts-slider .slick-track{
+    display: flex;
+}
+.blog-posts-slider .slick-slide{
+    height: auto;
+}
+.blog-posts-slider .slick-slide>div{
+    height: 100%;
+}
+.browse-row .new-drop-img img {
+    height: 138px !important;
+}
+.browse-row .new-drop-info{
+    height: 80%;
+}
+/* Homepage Ends */
 
 @media (min-height: 1200px) {
     .form-page main {
@@ -727,11 +1204,17 @@ body {
         gap: 60px;
     }
 }
+
+@media (min-width: 1200px) {
+    .container-1000{
+        max-width: 1000px;
+    }
+}
 @media (max-width: 1200px) {
     .new-drops-slider .slick-arrow.slick-prev {
         transform: translateY(-50%) translateX(-20%);
     }
-    
+
     .new-drops-slider .slick-arrow.slick-next {
         transform: translateY(-50%) translateX(20%);
     }
@@ -776,10 +1259,23 @@ body {
     .page-title {
         font-size: 24px;
     }
+    .nft-categories .nft-sq-card{
+        max-width: 50%;
+    }
 }
 
 @media (max-width:768px) {
-
+    .main-table tbody td,
+    .main-table thead th {
+        font-size: 10px !important;
+    }
+    .btn-table{
+        font-size: 10px !important;
+        padding: 6px 10px !important;
+    }
+    .nft-categories .nft-sq-card{
+        max-width: 100%;
+    }
 }
 
 @media (max-width:576px) {
@@ -799,5 +1295,11 @@ body {
 
     .nothing-title {
         font-size: 36px;
+    }
+    .coa-content{
+        padding: 32px 0px 25px;
+    }
+    .f-currency-flex{
+        margin-left: auto;
     }
 }

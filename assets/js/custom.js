@@ -21,6 +21,7 @@ $(document).ready(function () {
             }
         });
     });
+    $('[data-bs-toggle="tooltip"]').tooltip();
 });
 
 $(document).ready(function () {
@@ -39,19 +40,71 @@ $(document).ready(function () {
         }
     }
     $('.header-search').click(function () {
-        $('.search-form').slideToggle();
+        $('header .search-form').slideToggle();
     });
 
     $(window).on('click', function (e) {
-        if (!$(e.target).closest('.search-form').length && !$(e.target).closest('.header-search').length) {
+        if (!$(e.target).closest('header .search-form').length && !$(e.target).closest('.header-search').length) {
             hideSearchForm();
         }
     });
-    if ($('.currency-inp')) {
-        $('.currency-inp').select2({
+    if ($('.f-currency-flex .currency-inp').length) {
+        $('.f-currency-flex .currency-inp').select2({
             containerCssClass: 'curr-container',
             dropdownCssClass: 'curr-dropdown', // Custom class for the dropdown container
             minimumResultsForSearch: Infinity // Hides the search input
+        });
+    }
+    if ($('.dash-currency-flex .currency-inp').length) {
+        $('.dash-currency-flex .currency-inp').select2({
+            containerCssClass: 'curr-container',
+            dropdownCssClass: 'curr-dropdown', // Custom class for the dropdown container
+            minimumResultsForSearch: Infinity, // Hides the search input
+            templateResult: function (data) {
+                // Customize dropdown items
+                if (!data.id) {
+                    return data.text; // Return placeholder text if no id
+                }
+                return `${data.text}`;
+            },
+            templateSelection: function (data) {
+                // Customize the selected item
+                if (!data.id) {
+                    return data.text; // Return placeholder text if no id
+                }
+                return `Currency: ${data.text}`;
+            }
+        });
+    }
+    
+    if ($('.dash-duration-flex .currency-inp').length) {
+        $('.dash-duration-flex .currency-inp').select2({
+            containerCssClass: 'curr-container',
+            dropdownCssClass: 'curr-dropdown', // Custom class for the dropdown container
+            minimumResultsForSearch: Infinity, // Hides the search input
+            templateResult: function (data) {
+                // Customize dropdown items
+                if (!data.id) {
+                    return data.text; // Return placeholder text if no id
+                }
+                return `${data.text}`;
+            },
+            templateSelection: function (data) {
+                // Customize the selected item
+                let svgIcon =  `<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.1667 1.6V2.1H11.6667H12.4444C13.0107 2.1 13.5 2.58277 13.5 3.2V14.4C13.5 15.0172 13.0107 15.5 12.4444 15.5H1.55556C0.989326 15.5 0.5 15.0172 0.5 14.4V3.2C0.5 2.58277 0.989327 2.1 1.55556 2.1H2.33333H2.83333V1.6V0.5H3.38889V1.6V2.1H3.88889H10.1111H10.6111V1.6V0.5H11.1667V1.6ZM12.9444 3.2V2.7H12.4444H1.55556H1.05556V3.2V4.8V5.3H1.55556H12.4444H12.9444V4.8V3.2ZM1.05556 14.4V14.9H1.55556H12.4444H12.9444V14.4V6.4V5.9H12.4444H1.55556H1.05556V6.4V14.4ZM7.5 9.3H10.3889V12.3H7.5V9.3Z" stroke="#150F36"/>
+</svg>
+`;
+                if (!data.id) {
+                    return data.text; // Return placeholder text if no id
+                }
+                return $(`
+                    <span class="d-flex align-items-center">
+                        ${svgIcon}
+                        <span class="ms-2">${data.text}</span>
+                    </span>
+                `);
+            }
         });
     }
 
@@ -106,9 +159,9 @@ $(document).ready(function () {
 });
 
 function showSearchForm() {
-    $('.search-form').slideDown();
+    $('header .search-form').slideDown();
 }
 
 function hideSearchForm() {
-    $('.search-form').slideUp();
+    $('header .search-form').slideUp();
 }

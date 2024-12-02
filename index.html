@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My People</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/slick.min.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
+        <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body class="home-page">
+        <main>
+            <header>
+                <form action="dashboard-search.html" class="search-form">
+                    <input type="search" name="q" id="q" class="form-control fp-inp">
+                    <button class="btn btn-sky">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.21875 6.46875C2.80208 7.05208 3.51042 7.34375 4.34375 7.34375C5.17708 7.34375 5.88542 7.05208 6.46875 6.46875C7.05208 5.88542 7.34375 5.17708 7.34375 4.34375C7.34375 3.51042 7.05208 2.80208 6.46875 2.21875C5.88542 1.63542 5.17708 1.34375 4.34375 1.34375C3.51042 1.34375 2.80208 1.63542 2.21875 2.21875C1.63542 2.80208 1.34375 3.51042 1.34375 4.34375C1.34375 5.17708 1.63542 5.88542 2.21875 6.46875ZM8.34375 7.34375L11.6562 10.6562L10.6562 11.6562L7.34375 8.34375V7.8125L7.15625 7.625C6.36458 8.3125 5.42708 8.65625 4.34375 8.65625C3.13542 8.65625 2.10417 8.23958 1.25 7.40625C0.416667 6.57292 0 5.55208 0 4.34375C0 3.13542 0.416667 2.11458 1.25 1.28125C2.10417 0.427083 3.13542 0 4.34375 0C5.55208 0 6.57292 0.427083 7.40625 1.28125C8.23958 2.11458 8.65625 3.13542 8.65625 4.34375C8.65625 4.78125 8.55208 5.28125 8.34375 5.84375C8.13542 6.38542 7.89583 6.82292 7.625 7.15625L7.8125 7.34375H8.34375Z"
+                                fill="#150F36" />
+                        </svg>
+                    </button>
+                </form>
+                <div class="container">
+                    <div class="d-flex align-items-center gap-3 py-3 flex-wrap justify-content-between">
+                        <div class="d-flex align-items-center gap-lg-3 gap-2">
+                            <a href="./index.html">
+                                <img src="./assets/img/logo-onLight.svg" alt="Logo" class="side-logo">
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center gap-lg-4 gap-2 ms-auto">
+                            <div class="d-flex align-items-center gap-sm-3 gap-2">
+                                <a href="#" class="btn btn-white">
+                                    <div class="btn-flex">
+                                        <span>
+                                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11 0.65625C11.5 0.65625 11.9479 0.78125 12.3438 1.03125C12.7396 1.26042 13.0521 1.58333 13.2812 2C13.5312 2.39583 13.6562 2.84375 13.6562 3.34375V8.65625C13.6562 9.15625 13.5312 9.61458 13.2812 10.0312C13.0521 10.4271 12.7396 10.75 12.3438 11C11.9479 11.2292 11.5 11.3438 11 11.3438H3C2.5 11.3438 2.05208 11.2292 1.65625 11C1.26042 10.75 0.9375 10.4271 0.6875 10.0312C0.458333 9.61458 0.34375 9.15625 0.34375 8.65625V3.34375C0.34375 2.84375 0.458333 2.39583 0.6875 2C0.9375 1.58333 1.26042 1.26042 1.65625 1.03125C2.05208 0.78125 2.5 0.65625 3 0.65625H11ZM9.75 7.1875L12.0938 5.21875C11.9688 5.05208 11.8125 4.91667 11.625 4.8125C11.4375 4.70833 11.2292 4.65625 11 4.65625H3C2.72917 4.65625 2.47917 4.73958 2.25 4.90625C2.02083 5.05208 1.86458 5.25 1.78125 5.5L9.1875 7.3125C9.39583 7.375 9.58333 7.33333 9.75 7.1875ZM3 2C2.625 2 2.30208 2.13542 2.03125 2.40625C1.78125 2.65625 1.65625 2.96875 1.65625 3.34375V3.6875C1.86458 3.58333 2.07292 3.5 2.28125 3.4375C2.51042 3.375 2.75 3.34375 3 3.34375H11C11.25 3.34375 11.4792 3.375 11.6875 3.4375C11.9167 3.5 12.1354 3.58333 12.3438 3.6875V3.34375C12.3438 2.96875 12.2083 2.65625 11.9375 2.40625C11.6875 2.13542 11.375 2 11 2H3Z"
+                                                    fill="#150F36" />
+                                            </svg>
+                                        </span>
+                                        <span class="d-lg-block d-none">99.0018 ETH | 1.992 WETH</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn-sky">
+                                    <div class="btn-flex px-lg-3">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.6562 6L11.8438 4.15625L10 3.34375L11.8438 2.5L12.6562 0.65625L13.5 2.5L15.3438 3.34375L13.5 4.15625L12.6562 6ZM7.65625 6.34375L11.3438 8L7.65625 9.65625L6 13.3438L4.34375 9.65625L0.65625 8L4.34375 6.34375L6 2.65625L7.65625 6.34375ZM12.6562 10L13.5 11.8438L15.3438 12.6562L13.5 13.5L12.6562 15.3438L11.8438 13.5L10 12.6562L11.8438 11.8438L12.6562 10Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <span class="d-lg-block d-none">Login</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="main-sec py-4">
+                <div class="container container-1000">
+                    <div class="d-flex flex-column gap-md-5 gap-4">
+                        <form action="dashboard-search.html" class="search-form static-search-form">
+                            <input type="search" name="q" id="q" class="form-control fp-inp"
+                                placeholder="Search topics, collections, and accounts">
+                            <button class="btn btn-sky">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.21875 6.46875C2.80208 7.05208 3.51042 7.34375 4.34375 7.34375C5.17708 7.34375 5.88542 7.05208 6.46875 6.46875C7.05208 5.88542 7.34375 5.17708 7.34375 4.34375C7.34375 3.51042 7.05208 2.80208 6.46875 2.21875C5.88542 1.63542 5.17708 1.34375 4.34375 1.34375C3.51042 1.34375 2.80208 1.63542 2.21875 2.21875C1.63542 2.80208 1.34375 3.51042 1.34375 4.34375C1.34375 5.17708 1.63542 5.88542 2.21875 6.46875ZM8.34375 7.34375L11.6562 10.6562L10.6562 11.6562L7.34375 8.34375V7.8125L7.15625 7.625C6.36458 8.3125 5.42708 8.65625 4.34375 8.65625C3.13542 8.65625 2.10417 8.23958 1.25 7.40625C0.416667 6.57292 0 5.55208 0 4.34375C0 3.13542 0.416667 2.11458 1.25 1.28125C2.10417 0.427083 3.13542 0 4.34375 0C5.55208 0 6.57292 0.427083 7.40625 1.28125C8.23958 2.11458 8.65625 3.13542 8.65625 4.34375C8.65625 4.78125 8.55208 5.28125 8.34375 5.84375C8.13542 6.38542 7.89583 6.82292 7.625 7.15625L7.8125 7.34375H8.34375Z"
+                                        fill="#150F36" />
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="d-flex text-dark flex-column gap-3">
+                            <div class="dashboard-table-navs mb-md-0 d-flex align-items-center justify-content-between">
+                                <div class="types-nav search-page-nav">
+                                    <button class="btn btn-nav active"><span class="px-4">All</span></button>
+                                    <button class="btn btn-nav">Trending</button>
+                                    <button class="btn btn-nav">Art</button>
+                                    <button class="btn btn-nav">Gaming</button>
+                                    <button class="btn btn-nav">Travel</button>
+                                    <button class="btn btn-nav">Music</button>
+                                </div>
+                            </div>
+                            <div class="posts-sec">
+                                <p class="mb-0 text-dark fw-bold">Featured posts</p>
+                                <div class="new-drops-slider">
+                                    <div class="new-drop-cont pb-1">
+                                        <a href="#" class="nft-post">
+                                            <div class="np-tag">
+                                                Trending
+                                            </div>
+                                            <div class="d-flex flex-column gap-3 w-100">
+                                                <div class="nft-post-top">
+                                                    <img src="./assets/img/feat-1.png" alt="Featured"
+                                                        class="nft-post-img">
+                                                </div>
+                                                <div class="nft-bottom">
+                                                    <span class="np-title">Master of Business Admin...</span>
+                                                    <span class="np-price">0.3 ETH</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="new-drop-cont pb-1">
+                                        <a href="#" class="nft-post">
+                                            <div class="d-flex flex-column gap-3 w-100">
+                                                <div class="nft-post-top">
+                                                    <img src="./assets/img/feat-2.png" alt="Featured"
+                                                        class="nft-post-img">
+                                                </div>
+                                                <div class="nft-bottom">
+                                                    <span class="np-title">You good? by @Jess-e</span>
+                                                    <span class="np-price">0.3 ETH</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="new-drop-cont pb-1">
+                                        <a href="#" class="nft-post">
+                                            <div class="np-tag">
+                                                On Sale
+                                            </div>
+                                            <div class="d-flex flex-column gap-3 w-100">
+                                                <div class="nft-post-top">
+                                                    <img src="./assets/img/feat-3.png" alt="Featured"
+                                                        class="nft-post-img">
+                                                </div>
+                                                <div class="nft-bottom">
+                                                    <span class="np-title">Ojo Fiti by @Hi-Ho</span>
+                                                    <span class="np-price">0.3 ETH</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="new-drop-cont pb-1">
+                                        <a href="#" class="nft-post">
+                                            <div class="d-flex flex-column gap-3 w-100">
+                                                <div class="nft-post-top">
+                                                    <img src="./assets/img/feat-2.png" alt="Featured"
+                                                        class="nft-post-img">
+                                                </div>
+                                                <div class="nft-bottom">
+                                                    <span class="np-title">You good? by @Jess-e</span>
+                                                    <span class="np-price">0.3 ETH</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-flex">
+                            <div class="posts-sec">
+                                <p class="mb-0 text-dark fw-bold">Featured posts</p>
+                                <div class="home-posts-box">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="./assets/img/home-sec-profile-1.png" alt="Profile" height="38" width="38" class="rounded-circle">
+                                            </div>
+                                            <div class="text-white d-flex flex-column">
+                                                <span class="fw-semibold text-md">Broadband</span>
+                                                <span class="text-xs lh-1">11 .2 ETH</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-home">See all</a>
+                                    </div>
+                                    <div class="row nft-posts-row">
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-1-1.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-1-2.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-1-3.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="posts-sec">
+                                <div class="home-posts-box">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="./assets/img/home-sec-profile-1.png" alt="Profile" height="38" width="38" class="rounded-circle">
+                                            </div>
+                                            <div class="text-white d-flex flex-column">
+                                                <span class="fw-semibold text-md">Broadband</span>
+                                                <span class="text-xs lh-1">11 .2 ETH</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-home">See all</a>
+                                    </div>
+                                    <div class="row nft-posts-row">
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-2-1.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-2-2.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-2-3.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="posts-sec">
+                                <div class="home-posts-box">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="./assets/img/home-sec-profile-1.png" alt="Profile" height="38" width="38" class="rounded-circle">
+                                            </div>
+                                            <div class="text-white d-flex flex-column">
+                                                <span class="fw-semibold text-md">Broadband</span>
+                                                <span class="text-xs lh-1">11 .2 ETH</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-home">See all</a>
+                                    </div>
+                                    <div class="row nft-posts-row">
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-3-1.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-3-2.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                            <a href="#" class="nft-post">
+                                                <div class="np-tag">Trending</div>
+                                                <div class="d-flex flex-column gap-3 w-100">
+                                                    <div class="nft-post-top">
+                                                        <img src="./assets/img/box-3-3.png" alt="Featured"
+                                                            class="nft-post-img">
+                                                    </div>
+                                                    <div class="nft-bottom">
+                                                        <span class="np-title">You good? by @Jess-e</span>
+                                                        <span class="np-price">0.3 ETH</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="posts-sec">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="fw-bold text-dark">Trending in Art</span>
+                                <a href="#" class="btn btn-home">See all</a>
+                            </div>
+                            <div class="nft-categories">
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="posts-sec">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="fw-bold text-dark">Trending in Gaming</span>
+                                <a href="#" class="btn btn-home">See all</a>
+                            </div>
+                            <div class="nft-categories">
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="posts-sec">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="fw-bold text-dark">Trending in Food</span>
+                                <a href="#" class="btn btn-home">See all</a>
+                            </div>
+                            <div class="nft-categories">
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="posts-sec">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="fw-bold text-dark">Trending in Photography</span>
+                                <a href="#" class="btn btn-home">See all</a>
+                            </div>
+                            <div class="nft-categories">
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                                <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                    <div class="new-drop-img">
+                                        <img src="./assets/img/sample-1.png" alt="New Drop">
+                                    </div>
+                                    <div class="new-drop-info">
+                                        <h6 class="new-drop-title mb-0 grostek">nfttitle</h6>
+                                        <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
+                                    </div>
+                                    <div class="new-drop-posts">
+                                        <span>46 Posts</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="posts-sec">
+                            
+                            <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 text-dark fw-bold">NFT 101</p>
+                                    <a href="#" class="btn btn-home">See all</a>
+                            </div>
+                            <div class="new-drops-slider blog-posts-slider">
+                                <div class="new-drop-cont">
+                                    <div class="nft-post blog-post">
+                                        <div class="d-flex flex-column gap-3 w-100">
+                                            <div class="nft-post-top">
+                                                <img src="./assets/img/blog-1.png" alt="Featured"
+                                                    class="nft-post-img">
+                                            </div>
+                                            <div class="nft-bottom gap-2 flex-grow-1 d-flex flex-column justify-content-between">
+                                                <span class="np-title">What is an NFT?</span>
+                                                <div><a href="#" class="btn btn-read-more">Read</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-drop-cont">
+                                    <div class="nft-post blog-post">
+                                        <div class="d-flex flex-column gap-3 w-100">
+                                            <div class="nft-post-top">
+                                                <img src="./assets/img/blog-2.png" alt="Featured"
+                                                    class="nft-post-img">
+                                            </div>
+                                            <div class="nft-bottom gap-2 flex-grow-1 d-flex flex-column justify-content-between">
+                                                <span class="np-title">Master of Business Administration</span>
+                                                <div><a href="#" class="btn btn-read-more">Read</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-drop-cont">
+                                    <div class="nft-post blog-post">
+                                        <div class="d-flex flex-column gap-3 w-100">
+                                            <div class="nft-post-top">
+                                                <img src="./assets/img/blog-3.png" alt="Featured"
+                                                    class="nft-post-img">
+                                            </div>
+                                            <div class="nft-bottom gap-2 flex-grow-1 d-flex flex-column justify-content-between">
+                                                <span class="np-title">How to stay safe in web3</span>
+                                                <div><a href="#" class="btn btn-read-more">Read</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-drop-cont">
+                                    <div class="nft-post blog-post">
+                                        <div class="d-flex flex-column gap-3 w-100">
+                                            <div class="nft-post-top">
+                                                <img src="./assets/img/blog-2.png" alt="Featured"
+                                                    class="nft-post-img">
+                                            </div>
+                                            <div class="nft-bottom gap-2 flex-grow-1 d-flex flex-column justify-content-between">
+                                                <span class="np-title">Master of Business Administration</span>
+                                                <div><a href="#" class="btn btn-read-more">Read</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="posts-sec">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="fw-bold text-dark">Trending in Photography</span>
+                                <a href="#" class="btn btn-home">See all</a>
+                            </div>
+                            <div class="row nft-posts-row browse-row">
+                                <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                    <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                        <div class="new-drop-img">
+                                            <img src="./assets/img/browse-1.png" alt="New Drop">
+                                        </div>
+                                        <div class="new-drop-info">
+                                            <h6 class="new-drop-title mb-0 grostek">Food</h6>
+                                        </div>
+                                        <div class="new-drop-posts">
+                                            <span>46 Posts</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                    <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                        <div class="new-drop-img">
+                                            <img src="./assets/img/browse-2.png" alt="New Drop">
+                                        </div>
+                                        <div class="new-drop-info">
+                                            <h6 class="new-drop-title mb-0 grostek">Art</h6>
+                                        </div>
+                                        <div class="new-drop-posts">
+                                            <span>46 Posts</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                    <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                        <div class="new-drop-img">
+                                            <img src="./assets/img/browse-3.png" alt="New Drop">
+                                        </div>
+                                        <div class="new-drop-info">
+                                            <h6 class="new-drop-title mb-0 grostek">Travel</h6>
+                                        </div>
+                                        <div class="new-drop-posts">
+                                            <span>46 Posts</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                    <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                        <div class="new-drop-img">
+                                            <img src="./assets/img/browse-4.png" alt="New Drop">
+                                        </div>
+                                        <div class="new-drop-info">
+                                            <h6 class="new-drop-title mb-0 grostek">Food</h6>
+                                        </div>
+                                        <div class="new-drop-posts">
+                                            <span>46 Posts</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                    <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                        <div class="new-drop-img">
+                                            <img src="./assets/img/browse-5.png" alt="New Drop">
+                                        </div>
+                                        <div class="new-drop-info">
+                                            <h6 class="new-drop-title mb-0 grostek">Art</h6>
+                                        </div>
+                                        <div class="new-drop-posts">
+                                            <span>46 Posts</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 pb-3 mb-1">
+                                    <a href="dashboard-collection-overview.html" class="new-drop-card nft-sq-card">
+                                        <div class="new-drop-img">
+                                            <img src="./assets/img/browse-6.png" alt="New Drop">
+                                        </div>
+                                        <div class="new-drop-info">
+                                            <h6 class="new-drop-title mb-0 grostek">Travel</h6>
+                                        </div>
+                                        <div class="new-drop-posts">
+                                            <span>46 Posts</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="container-fluid">
+                    <div class="px-xl-5 d-flex align-items-center gap-3 py-3 flex-wrap justify-content-between">
+                        <div class="d-flex align-items-center gap-lg-4 gap-2">
+                            <div class="d-flex align-items-center f-lang-flex me-2">
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4375 10.5938C12.375 9.59375 12.8438 8.39583 12.8438 7C12.8438 5.89583 12.5312 4.89583 11.9062 4C11.3021 3.10417 10.5 2.45833 9.5 2.0625V2.34375C9.5 2.69792 9.36458 3.01042 9.09375 3.28125C8.82292 3.53125 8.51042 3.65625 8.15625 3.65625H6.84375V5C6.84375 5.1875 6.77083 5.34375 6.625 5.46875C6.5 5.59375 6.34375 5.65625 6.15625 5.65625H4.84375V7H8.84375C9.03125 7 9.1875 7.0625 9.3125 7.1875C9.4375 7.3125 9.5 7.46875 9.5 7.65625V9.65625H10.1562C10.7812 9.65625 11.2083 9.96875 11.4375 10.5938ZM6.84375 12.2812V11C6.48958 11 6.17708 10.8646 5.90625 10.5938C5.63542 10.3229 5.5 10.0104 5.5 9.65625V9L2.3125 5.8125C2.20833 6.22917 2.15625 6.625 2.15625 7C2.15625 8.35417 2.60417 9.53125 3.5 10.5312C4.41667 11.5312 5.53125 12.1146 6.84375 12.2812ZM2.78125 2.3125C4.09375 1 5.66667 0.34375 7.5 0.34375C9.33333 0.34375 10.8958 1 12.1875 2.3125C13.5 3.60417 14.1562 5.16667 14.1562 7C14.1562 8.83333 13.5 10.4062 12.1875 11.7188C10.8958 13.0104 9.33333 13.6562 7.5 13.6562C5.66667 13.6562 4.09375 13.0104 2.78125 11.7188C1.48958 10.4062 0.84375 8.83333 0.84375 7C0.84375 5.16667 1.48958 3.60417 2.78125 2.3125Z"
+                                        fill="#150F36" />
+                                </svg>
+                                <a href="#" class="f-text text-decoration-none fw-bold">English</a>
+                            </div>
+                            <a href="#" class="f-text text-decoration-none fw-bold">Privacy Policy</a>
+                        </div>
+                        <div class="d-flex align-items-center f-currency-flex">
+                            <label class="f-text text-decoration-none fw-bold" for="currency">Currency</label>
+                            <select name="currency" id="currency" class="currency-inp">
+                                <option value="USD">USD</option>
+                                <option value="WON">WON</option>
+                                <option value="JPY">JPY</option>
+                                <option value="GBP">GBP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="ETH">ETH</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="./assets/js/dataTables.min.js"></script>
+        <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
+        <script src="./assets/js/custom.js"></script>
+    </body>
+
+</html>
