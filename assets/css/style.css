@@ -1199,6 +1199,122 @@ body:not(.form-page) header{
 }
 /* Homepage Ends */
 
+/* Details Page */
+.details-box{
+    display: flex;
+}
+.details-box .nft-card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-box .nc-title{
+    font-size: 15px;
+}
+
+.details-box .nci-value{
+    font-size: 15px;
+}
+
+.details-box .nci-label{
+    font-size: 13px;
+}
+
+.details-box .nci-box,
+.details-box .nft-credits{
+    padding: 14px;
+}
+
+.details-right{
+    width: 50%;
+    padding: 20px 0;
+}
+
+.dr-owner-info{
+    font-size: 12px;
+    color: #150F36;
+}
+.dr-title{
+    font-size: 18px;
+}
+.dr-owner-info{
+    gap: 6px;
+}
+
+.dr-desc{
+    font-size: 12px;
+}
+.dr-middle{
+    border-top: 1px solid #150F36;
+    border-bottom: 1px solid #150F36;
+}
+.drm-box{
+    border-right: 1px solid #150F36;
+    padding: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.dr-middle .drm-box:last-child{
+    border-right: 0;
+}
+.details-right{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #150F36;
+    border-left: 0;
+}
+
+.drb-title{
+    font-size: 12px;
+}
+
+.drb-table-cont{
+    border-radius: 2px;
+    border: 1px solid rgba(21, 15, 54, 0.5);
+}
+
+.drb-table th,
+.drb-table td{
+    border-bottom: 1px solid #150F36 !important;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.drb-table tbody tr:last-child td{
+    border-bottom: 0 !important;
+}
+
+.drb-table thead th{
+    color: #5F646D !important; 
+    font-weight: 400 !important;
+}
+
+.drb-table tbody td{
+    color: #150F36 !important; 
+    font: 400 !important;
+}
+.drb-status{
+    font-size: 10px;
+}
+
+.details-box .fp-nc-img{
+    flex-grow: 1;
+}
+
+.details-box .nci-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Details Page Ends */
+
+
 @media (min-height: 1200px) {
     .form-page main {
         min-height: unset;
@@ -1218,6 +1334,19 @@ body:not(.form-page) header{
 
     .new-drops-slider .slick-arrow.slick-next {
         transform: translateY(-50%) translateX(20%);
+    }
+
+    .details-box{
+        flex-direction: column;
+    }
+
+    .details-box>div{
+        width: 100% !important;
+    }
+
+    .details-right{
+        border-top: 0;
+        border-left: 1px solid #150F36;
     }
 }
 
@@ -1242,10 +1371,7 @@ body:not(.form-page) header{
     }
 
     .fp-cards-cont {
-        height: auto;
-        position: static;
-        overflow-x: auto;
-        width: 100%;
+        display: none;
     }
 
     .fp-cards {

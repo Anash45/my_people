@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My People</title>
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/slick.min.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
+        <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
@@ -22,7 +25,7 @@
             </div>
             <div class="side-middle">
                 <nav class="d-flex flex-column gap-2">
-                    <a href="./dashboard.html" class="nav-link active">
+                    <a href="./dashboard.html" class="nav-link">
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M7.8125 6.15625H9.65625V10.1562H7.8125V6.15625ZM4.0625 0.84375H5.9375V10.1562H4.0625V0.84375ZM0.34375 3.625H2.34375V10.1562H0.34375V3.625Z"
@@ -54,7 +57,7 @@
                         </svg>
                         <span class="nav-link-text">Collected</span>
                     </a>
-                    <a href="./dashboard-collections.html" class="nav-link">
+                    <a href="./dashboard-collections.html" class="nav-link active">
                         <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M6 10.1562C5.8125 10.0104 4.95833 9.35417 3.4375 8.1875C1.9375 7 0.791667 6.10417 0 5.5L6 0.84375L12 5.5C11.2083 6.10417 10.0625 6.98958 8.5625 8.15625C7.0625 9.32292 6.20833 9.98958 6 10.1562ZM6 11.875L10.9062 8.03125L12 8.875L6 13.5312L0 8.875L1.09375 8.03125L6 11.875Z"
@@ -126,7 +129,7 @@
                             <button class="btn btn-white menu-btn" id="menu-btn" onclick="toggleMenu()">
                                 <img src="./assets/img/menu-bars.svg" alt="Menu" class="bars-icon">
                             </button>
-                            <h2 class="page-title grostek">Dashboard</h2>
+                            <h2 class="page-title grostek">Collections</h2>
                         </div>
                         <div class="d-flex align-items-center gap-lg-4 gap-2 ms-auto">
                             <div class="d-flex align-items-center gap-sm-2 gap-0">
@@ -180,34 +183,204 @@
                     </div>
                 </div>
             </header>
-            <section class="main-sec py-4 d-flex flex-column">
-                <div class="container-fluid d-flex flex-column justify-content-between flex-grow-1">
-                    <div class="px-xl-5 gap-4 py-sm-2 d-flex flex-column justify-content-between flex-grow-1">
-                        <div class="d-flex align-items-center wallet-flex grostek">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.4219 8.89844C10.6823 9.13281 10.9818 9.25 11.3203 9.25C11.6589 9.25 11.9453 9.13281 12.1797 8.89844C12.4401 8.66406 12.5703 8.36458 12.5703 8C12.5703 7.63542 12.4401 7.33594 12.1797 7.10156C11.9453 6.86719 11.6589 6.75 11.3203 6.75C10.9818 6.75 10.6823 6.86719 10.4219 7.10156C10.1875 7.33594 10.0703 7.63542 10.0703 8C10.0703 8.36458 10.1875 8.66406 10.4219 8.89844ZM8 11.3203V4.67969H16.3203V11.3203H8ZM15.5 13V13.8203C15.5 14.263 15.3307 14.6536 14.9922 14.9922C14.6536 15.3307 14.263 15.5 13.8203 15.5H2.17969C1.71094 15.5 1.30729 15.3438 0.96875 15.0312C0.65625 14.6927 0.5 14.2891 0.5 13.8203V2.17969C0.5 1.71094 0.65625 1.32031 0.96875 1.00781C1.30729 0.669271 1.71094 0.5 2.17969 0.5H13.8203C14.263 0.5 14.6536 0.669271 14.9922 1.00781C15.3307 1.34635 15.5 1.73698 15.5 2.17969V3H8C7.53125 3 7.1276 3.16927 6.78906 3.50781C6.47656 3.82031 6.32031 4.21094 6.32031 4.67969V11.3203C6.32031 11.7891 6.47656 12.1927 6.78906 12.5312C7.1276 12.8438 7.53125 13 8 13H15.5Z"
-                                    fill="#150F36" />
-                            </svg>
-                            <span>99.0018 ETH</span>
-                        </div>
-                        <div class="d-flex flex-column gap-5 align-items-center my-auto text-center nothing-flex">
-                            <img src="./assets/img/Circles.svg" alt="Circle" class="nothing-circles">
-                            <div class="d-flex flex-column gap-2 text-dark">
-                                <h5 class="fw-medium nothing-title mb-0 grostek">Nothing to show</h5>
-                                <p class="mb-0 nothing-desc">Connect your wallet and Instagram to start.</p>
-                            </div>
-                            <a href="./connect-wallet.html" class="btn btn-form-primary">
-                                <div class="d-flex align-items-center justify-content-center gap-1">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.74609 12.2539C4.94141 13.4258 6.35938 14.0117 8 14.0117C9.64062 14.0117 11.0469 13.4258 12.2188 12.2539C13.4141 11.0586 14.0117 9.64062 14.0117 8C14.0117 6.35937 13.4141 4.95312 12.2188 3.78125C11.0469 2.58594 9.64062 1.98828 8 1.98828C6.35938 1.98828 4.94141 2.58594 3.74609 3.78125C2.57422 4.95312 1.98828 6.35937 1.98828 8C1.98828 9.64062 2.57422 11.0586 3.74609 12.2539ZM2.69141 2.72656C4.16797 1.25 5.9375 0.511719 8 0.511719C10.0625 0.511719 11.8203 1.25 13.2734 2.72656C14.75 4.17969 15.4883 5.9375 15.4883 8C15.4883 10.0625 14.75 11.832 13.2734 13.3086C11.8203 14.7617 10.0625 15.4883 8 15.4883C5.9375 15.4883 4.16797 14.7617 2.69141 13.3086C1.23828 11.832 0.511719 10.0625 0.511719 8C0.511719 5.9375 1.23828 4.17969 2.69141 2.72656ZM8.73828 4.23828V7.26172H11.7617V8.73828H8.73828V11.7617H7.26172V8.73828H4.23828V7.26172H7.26172V4.23828H8.73828Z"
-                                            fill="white" />
-                                    </svg>
-                                    <span>Create Account</span>
+            <section class="main-sec py-4">
+                <div class="container-fluid">
+                    <div class="px-xl-5 gap-4 py-sm-2 px-3">
+                        <div class="d-flex flex-column gap-4">
+                            <a href="./dashboard.html" class="text-dark fw-bold text-decoration-none">&lt; Back</a>
+                            <div class="details-box">
+                                <div class="nft-card">
+                                    <img src="./assets/img/form-page-slider-1.png" alt="NFT Image" class="fp-nc-img">
+                                    <div class="nft-credits">
+                                        <span class="nc-title">Sky Lines</span>
+                                    </div>
+                                    <div class="nc-interactions">
+                                        <div class="nci-box">
+                                            <div class="d-flex flex-column align-items-center text-center">
+                                                <span class="nci-value">901</span>
+                                                <span class="nci-label">Likes</span>
+                                            </div>
+                                        </div>
+                                        <div class="nci-box">
+                                            <div class="d-flex flex-column align-items-center text-center">
+                                                <span class="nci-value">43</span>
+                                                <span class="nci-label">Comments</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                                <div class="details-right">
+                                    <div class="px-3 d-flex flex-column gap-2">
+                                        <div
+                                            class="d-flex px-2 gap-2 justify-content-between dr-title align-items-center grostek">
+                                            <span class="fw-bold"> {Title} </span>
+                                            <span class="fw-bold"> 2.18 ETH </span>
+                                        </div>
+                                        <div class="d-flex px-2 gap-2 align-items-center dr-owner-info grostek">
+                                            <span><span class="fw-medium">Owned by</span> <span
+                                                    class="text-primary fw-bold">{owner
+                                                    name}</span></span><span>-</span><span
+                                                class="text-primary fw-bold">Collection name here</span>
+                                        </div>
+                                        <p class="mb-3 pb-1 px-2 text-dark dr-desc text-dark">Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                            the industry's standard dummy text ever since the 1500s, when an unknown
+                                            printer took a galley of type and scrambled it to make a type specimen book.
+                                            It has survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining essentially unchanged. It was popularised in the
+                                            1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                            and more recently with desktop publishing software like Aldus PageMaker
+                                            including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div class="dr-middle d-flex">
+                                        <div class="drm-box w-50 text-dark">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.00008 3C4.66675 3 1.82008 5.07333 0.666748 8C1.82008 10.9267 4.66675 13 8.00008 13C11.3334 13 14.1801 10.9267 15.3334 8C14.1801 5.07333 11.3334 3 8.00008 3ZM8.00008 11.3333C6.16008 11.3333 4.66675 9.84 4.66675 8C4.66675 6.16 6.16008 4.66667 8.00008 4.66667C9.84008 4.66667 11.3334 6.16 11.3334 8C11.3334 9.84 9.84008 11.3333 8.00008 11.3333ZM8.00008 6C6.89341 6 6.00008 6.89333 6.00008 8C6.00008 9.10667 6.89341 10 8.00008 10C9.10675 10 10.0001 9.10667 10.0001 8C10.0001 6.89333 9.10675 6 8.00008 6Z"
+                                                    fill="#150F36" />
+                                            </svg>
+                                            <span>7.192</span>
+                                            <span>MyPeople views</span>
+                                        </div>
+                                        <a href="#" class="drm-box w-50 text-dark">
+                                            <span>View on Instagram</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                    fill="#150F36" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="dr-bottom flex-grow-1 p-3 d-flex flex-column gap-3 pb-0">
+                                        <div class="d-flex flex-column gap-3">
+                                            <span class="drb-title fw-bold text-dark">Item activity</span>
+                                            <div class="table-responsive drb-table-cont">
+                                                <table class="table drb-table mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Event</th>
+                                                            <th class="text-end">Price</th>
+                                                            <th>From</th>
+                                                            <th>To</th>
+                                                            <th>Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Sale</td>
+                                                            <td class="text-end">0.002 ETH</td>
+                                                            <td class="text-primary">From name</td>
+                                                            <td class="text-primary">To name</td>
+                                                            <td class="text-primary">
+                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                    <span>1h ago</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                                            fill="#00A3FF" />
+                                                                    </svg>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Transfer</td>
+                                                            <td class="text-end">0.002 ETH</td>
+                                                            <td class="text-primary">From name</td>
+                                                            <td class="text-primary">To name</td>
+                                                            <td class="text-primary">
+                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                    <span>1h ago</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                                            fill="#00A3FF" />
+                                                                    </svg>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Offer</td>
+                                                            <td class="text-end">0.002 ETH</td>
+                                                            <td class="text-primary">From name</td>
+                                                            <td class="text-primary">To name</td>
+                                                            <td class="text-primary">
+                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                    <span>1h ago</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                                            fill="#00A3FF" />
+                                                                    </svg>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>List    <span class="text-success drb-status">(Sold)</span></td>
+                                                            <td class="text-end">0.002 ETH</td>
+                                                            <td class="text-primary">From name</td>
+                                                            <td class="text-primary">To name</td>
+                                                            <td class="text-primary">
+                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                    <span>1h ago</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                                            fill="#00A3FF" />
+                                                                    </svg>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>List    <span class="text-danger drb-status">(Expired)</span></td>
+                                                            <td class="text-end">0.002 ETH</td>
+                                                            <td class="text-primary">From name</td>
+                                                            <td class="text-primary">To name</td>
+                                                            <td class="text-primary">
+                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                    <span>1h ago</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                                            fill="#00A3FF" />
+                                                                    </svg>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mint    </td>
+                                                            <td class="text-end">0.002 ETH</td>
+                                                            <td class="text-primary">From name</td>
+                                                            <td class="text-primary">To name</td>
+                                                            <td class="text-primary">
+                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                    <span>1h ago</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.6667 12.6667H3.33333V3.33333H8V2H3.33333C2.59333 2 2 2.6 2 3.33333V12.6667C2 13.4 2.59333 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V8H12.6667V12.6667ZM9.33333 2V3.33333H11.7267L5.17333 9.88667L6.11333 10.8267L12.6667 4.27333V6.66667H14V2H9.33333Z"
+                                                                            fill="#00A3FF" />
+                                                                    </svg>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-3 justify-content-end mt-auto">
+                                            <a href="#" class="btn btn-white"><span class="px-3">Make offer</span></a>
+                                            <a href="#" class="btn btn-sky"><span class="px-3">Buy now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,6 +417,9 @@
         </main>
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="./assets/js/dataTables.min.js"></script>
+        <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
         <script src="./assets/js/custom.js"></script>
     </body>
