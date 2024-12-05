@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css?v=1">
     </head>
 
     <body class="dashboard-page">
@@ -165,7 +165,7 @@
                                         <span class="d-lg-block d-none">99.0018 ETH | 1.992 WETH</span>
                                     </div>
                                 </a>
-                                <a href="#" class="btn btn-sky">
+                                <a href="./dashboard-minting.html" class="btn btn-sky">
                                     <div class="btn-flex px-lg-3">
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -274,7 +274,8 @@
                                                             <td class="text-primary">From name</td>
                                                             <td class="text-primary">To name</td>
                                                             <td class="text-primary">
-                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                <a href="#"
+                                                                    class="d-flex gap-1 text-primary text-decoration-none">
                                                                     <span>1h ago</span>
                                                                     <svg width="16" height="16" viewBox="0 0 16 16"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,7 +292,8 @@
                                                             <td class="text-primary">From name</td>
                                                             <td class="text-primary">To name</td>
                                                             <td class="text-primary">
-                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                <a href="#"
+                                                                    class="d-flex gap-1 text-primary text-decoration-none">
                                                                     <span>1h ago</span>
                                                                     <svg width="16" height="16" viewBox="0 0 16 16"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -308,7 +310,8 @@
                                                             <td class="text-primary">From name</td>
                                                             <td class="text-primary">To name</td>
                                                             <td class="text-primary">
-                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                <a href="#"
+                                                                    class="d-flex gap-1 text-primary text-decoration-none">
                                                                     <span>1h ago</span>
                                                                     <svg width="16" height="16" viewBox="0 0 16 16"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,12 +323,14 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>List    <span class="text-success drb-status">(Sold)</span></td>
+                                                            <td>List <span class="text-success drb-status">(Sold)</span>
+                                                            </td>
                                                             <td class="text-end">0.002 ETH</td>
                                                             <td class="text-primary">From name</td>
                                                             <td class="text-primary">To name</td>
                                                             <td class="text-primary">
-                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                <a href="#"
+                                                                    class="d-flex gap-1 text-primary text-decoration-none">
                                                                     <span>1h ago</span>
                                                                     <svg width="16" height="16" viewBox="0 0 16 16"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -337,12 +342,14 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>List    <span class="text-danger drb-status">(Expired)</span></td>
+                                                            <td>List <span
+                                                                    class="text-danger drb-status">(Expired)</span></td>
                                                             <td class="text-end">0.002 ETH</td>
                                                             <td class="text-primary">From name</td>
                                                             <td class="text-primary">To name</td>
                                                             <td class="text-primary">
-                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                <a href="#"
+                                                                    class="d-flex gap-1 text-primary text-decoration-none">
                                                                     <span>1h ago</span>
                                                                     <svg width="16" height="16" viewBox="0 0 16 16"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -354,12 +361,13 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Mint    </td>
+                                                            <td>Mint </td>
                                                             <td class="text-end">0.002 ETH</td>
                                                             <td class="text-primary">From name</td>
                                                             <td class="text-primary">To name</td>
                                                             <td class="text-primary">
-                                                                <a href="#" class="d-flex gap-1 text-primary text-decoration-none">
+                                                                <a href="#"
+                                                                    class="d-flex gap-1 text-primary text-decoration-none">
                                                                     <span>1h ago</span>
                                                                     <svg width="16" height="16" viewBox="0 0 16 16"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -415,13 +423,45 @@
                 </div>
             </footer>
         </main>
+        <div class="loader-outer">
+            <div class="loader"></div>
+        </div>
+        <div class="modal fade" id="makeOfferModal" tabindex="-1" role="dialog"
+            aria-labelledby="makeOfferModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title text-dark grostek" id="makeOfferModalLabel">Make an offer</h5>
+                        <button type="button" class="close bg-transparent border-0" data-dismiss="modal"
+                            aria-label="Close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.2383 1.81641L7.05469 6L11.2383 10.1836L10.1836 11.2383L6 7.05469L1.81641 11.2383L0.761719 10.1836L4.94531 6L0.761719 1.81641L1.81641 0.761719L6 4.94531L10.1836 0.761719L11.2383 1.81641Z"
+                                    fill="#150F36" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column modal-flex">
+                            <div class="d-flex gap-3">
+                                <span>
+                                    <img src="./assets/" alt="" class="moda-img">
+                                </span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sky w-100">Make offer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="./assets/js/dataTables.min.js"></script>
         <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
-        <script src="./assets/js/custom.js"></script>
+        <script src="./assets/js/custom.js?v=1"></script>
     </body>
 
 </html>

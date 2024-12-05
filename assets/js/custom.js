@@ -156,6 +156,19 @@ $(document).ready(function () {
             }
         });
     }
+
+    $('.view-more').click(function () {
+        $(this).prev('.mdb-textarea').toggleClass('expanded');
+        $(this).text($(this).text() === 'View more' ? 'View less' : 'View more');
+    });
+
+    setTimeout(function () {
+        $('.loader-outer').fadeOut();
+    }, 1000);
+
+    if($('.cwr-chat').length) {
+        $('.cwr-chat').animate({ scrollTop: $('.cwr-chat')[0].scrollHeight }, 'slow');
+    }
 });
 
 function showSearchForm() {
@@ -164,4 +177,9 @@ function showSearchForm() {
 
 function hideSearchForm() {
     $('header .search-form').slideUp();
+}
+
+function openModal(modalId) {
+    $('.modal').modal('hide');
+    $(`#${modalId}`).modal('show');
 }

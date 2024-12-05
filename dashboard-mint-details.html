@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My People</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/slick.min.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
+        <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css?v=1">
+    </head>
+
+    <body class="minting-page">
+        <main>
+            <header>
+                <form action="dashboard-search.html" class="search-form">
+                    <input type="search" name="q" id="q" class="form-control fp-inp">
+                    <button class="btn btn-sky">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.21875 6.46875C2.80208 7.05208 3.51042 7.34375 4.34375 7.34375C5.17708 7.34375 5.88542 7.05208 6.46875 6.46875C7.05208 5.88542 7.34375 5.17708 7.34375 4.34375C7.34375 3.51042 7.05208 2.80208 6.46875 2.21875C5.88542 1.63542 5.17708 1.34375 4.34375 1.34375C3.51042 1.34375 2.80208 1.63542 2.21875 2.21875C1.63542 2.80208 1.34375 3.51042 1.34375 4.34375C1.34375 5.17708 1.63542 5.88542 2.21875 6.46875ZM8.34375 7.34375L11.6562 10.6562L10.6562 11.6562L7.34375 8.34375V7.8125L7.15625 7.625C6.36458 8.3125 5.42708 8.65625 4.34375 8.65625C3.13542 8.65625 2.10417 8.23958 1.25 7.40625C0.416667 6.57292 0 5.55208 0 4.34375C0 3.13542 0.416667 2.11458 1.25 1.28125C2.10417 0.427083 3.13542 0 4.34375 0C5.55208 0 6.57292 0.427083 7.40625 1.28125C8.23958 2.11458 8.65625 3.13542 8.65625 4.34375C8.65625 4.78125 8.55208 5.28125 8.34375 5.84375C8.13542 6.38542 7.89583 6.82292 7.625 7.15625L7.8125 7.34375H8.34375Z"
+                                fill="#150F36" />
+                        </svg>
+                    </button>
+                </form>
+                <div class="container">
+                    <div class="d-flex align-items-center gap-3 py-3 flex-wrap justify-content-between">
+                        <div class="d-flex align-items-center gap-lg-3 gap-2">
+                            <h2 class="page-title grostek">Add NFT details and price</h2>
+                        </div>
+                        <div class="d-flex align-items-center gap-lg-4 gap-2 ms-auto">
+                            <div class="d-flex align-items-center gap-sm-3 gap-2">
+                                <a href="#" class="btn btn-white me-md-5">
+                                    <div class="btn-flex">
+                                        <span>
+                                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11 0.65625C11.5 0.65625 11.9479 0.78125 12.3438 1.03125C12.7396 1.26042 13.0521 1.58333 13.2812 2C13.5312 2.39583 13.6562 2.84375 13.6562 3.34375V8.65625C13.6562 9.15625 13.5312 9.61458 13.2812 10.0312C13.0521 10.4271 12.7396 10.75 12.3438 11C11.9479 11.2292 11.5 11.3438 11 11.3438H3C2.5 11.3438 2.05208 11.2292 1.65625 11C1.26042 10.75 0.9375 10.4271 0.6875 10.0312C0.458333 9.61458 0.34375 9.15625 0.34375 8.65625V3.34375C0.34375 2.84375 0.458333 2.39583 0.6875 2C0.9375 1.58333 1.26042 1.26042 1.65625 1.03125C2.05208 0.78125 2.5 0.65625 3 0.65625H11ZM9.75 7.1875L12.0938 5.21875C11.9688 5.05208 11.8125 4.91667 11.625 4.8125C11.4375 4.70833 11.2292 4.65625 11 4.65625H3C2.72917 4.65625 2.47917 4.73958 2.25 4.90625C2.02083 5.05208 1.86458 5.25 1.78125 5.5L9.1875 7.3125C9.39583 7.375 9.58333 7.33333 9.75 7.1875ZM3 2C2.625 2 2.30208 2.13542 2.03125 2.40625C1.78125 2.65625 1.65625 2.96875 1.65625 3.34375V3.6875C1.86458 3.58333 2.07292 3.5 2.28125 3.4375C2.51042 3.375 2.75 3.34375 3 3.34375H11C11.25 3.34375 11.4792 3.375 11.6875 3.4375C11.9167 3.5 12.1354 3.58333 12.3438 3.6875V3.34375C12.3438 2.96875 12.2083 2.65625 11.9375 2.40625C11.6875 2.13542 11.375 2 11 2H3Z"
+                                                    fill="#150F36" />
+                                            </svg>
+                                        </span>
+                                        <span class="d-lg-block d-none">99.0018 ETH | 1.992 WETH</span>
+                                    </div>
+                                </a>
+                                <a href="./dashboard.html" class="btn btn-white ms-md-5">
+                                    <div class="btn-flex py-1">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.65625 1.28125L5.9375 5L9.65625 8.71875L8.71875 9.65625L5 5.9375L1.28125 9.65625L0.34375 8.71875L4.0625 5L0.34375 1.28125L1.28125 0.34375L5 4.0625L8.71875 0.34375L9.65625 1.28125Z"
+                                                fill="#150F36" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="main-sec py-4">
+                <div class="container">
+                    <div class="gap-4 pb-sm-2">
+                        <form action="dashboard-created-success.html" method="post" class="mt-2">
+                            <div class="details-box mint-details-box mb-4 mt-5 gap-xl-0 gap-4">
+                                <div class="nft-card">
+                                    <img src="./assets/img/form-page-slider-1.png" alt="NFT Image" class="fp-nc-img">
+                                    <div class="nft-credits">
+                                        <span class="nc-title">Sky Lines</span>
+                                    </div>
+                                    <div class="nc-interactions">
+                                        <div class="nci-box">
+                                            <div class="d-flex flex-column align-items-center text-center">
+                                                <span class="nci-value">901</span>
+                                                <span class="nci-label">Likes</span>
+                                            </div>
+                                        </div>
+                                        <div class="nci-box">
+                                            <div class="d-flex flex-column align-items-center text-center">
+                                                <span class="nci-value">43</span>
+                                                <span class="nci-label">Comments</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdb-right mdbr">
+                                    <div class="mdb-header">
+                                        <span class="fw-medium grostek text-dark">Details</span>
+                                    </div>
+                                    <div class="mdb-content">
+                                        <div class="mdbr-flex">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="mdb-form-group">
+                                                        <label class="fw-bold mdb-label">Name</label>
+                                                        <input type="text" class="form-control mdb-inp"
+                                                            value="💎💎💎 Title💎💎💎">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mdb-form-group">
+                                                        <label class="fw-bold mdb-label">Price</label>
+                                                        <input type="text" class="form-control mdb-inp"
+                                                            value="1.08 ETH">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mdb-form-group">
+                                                        <label class="fw-bold mdb-label">Collection <span
+                                                                class="text-optional">(optional)</span></label>
+                                                        <select name="" id="" class="mdb-inp form-select">
+                                                            <option value="Modern Elegance">Modern Elegance</option>
+                                                            <option value="Blue Skies">Blue Skies</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mdb-form-group">
+                                                        <label class="fw-bold mdb-label">Supply</label>
+                                                        <input type="number" class="form-control mdb-inp"
+                                                            value="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="mdb-form-group">
+                                                        <label class="fw-bold mdb-label">Description <span
+                                                            class="text-optional">(taken from Instagram)</span></label>
+                                                        <div class="position-relative">
+                                                            <textarea name="" id="" rows="4" class="form-control mdb-inp mdb-textarea text-secondary pb-5">Designed to be a visually striking and trendy piece it features a modern and appealing design with bold colors, clean lines, and a minimalist aesthetic, including elements like abstract shapes and elegant patterns. 💎💎💎</textarea>
+                                                            <span class="fw-bold text-primary view-more">View more</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-5">
+                                            <button class="border-0 bg-transparent fw-bold text-danger btn-reset" type="reset">
+                                                Reset
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="d-flex align-items-center justify-content-between flex-lg-row flex-column gap-4">
+                                <button type="button" class="btn btn-sky opacity-0 d-md-flex d-none">
+                                    <div class="btn-flex px-lg-3">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.6562 6L11.8438 4.15625L10 3.34375L11.8438 2.5L12.6562 0.65625L13.5 2.5L15.3438 3.34375L13.5 4.15625L12.6562 6ZM7.65625 6.34375L11.3438 8L7.65625 9.65625L6 13.3438L4.34375 9.65625L0.65625 8L4.34375 6.34375L6 2.65625L7.65625 6.34375ZM12.6562 10L13.5 11.8438L15.3438 12.6562L13.5 13.5L12.6562 15.3438L11.8438 13.5L10 12.6562L11.8438 11.8438L12.6562 10Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <span>Mint next</span>
+                                    </div>
+                                </button>
+                                <div class="progress-bar">
+                                    <div class="d-flex align-items-center gap-3 justify-content-between">
+                                        <span class="fw-bold text-dark">Progress</span>
+                                        <span class="text-dark">1 / 2</span>
+                                    </div>
+                                    <div class="pb-outer">
+                                        <div class="pb-progress" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-sky">
+                                    <div class="btn-flex">
+                                        <span>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.3438 7.65625V6.34375H7.65625V3.65625H6.34375V6.34375H3.65625V7.65625H6.34375V10.3438H7.65625V7.65625H10.3438ZM2.28125 2.3125C3.59375 1 5.16667 0.34375 7 0.34375C8.83333 0.34375 10.3958 1 11.6875 2.3125C13 3.60417 13.6562 5.16667 13.6562 7C13.6562 8.83333 13 10.4062 11.6875 11.7188C10.3958 13.0104 8.83333 13.6562 7 13.6562C5.16667 13.6562 3.59375 13.0104 2.28125 11.7188C0.989583 10.4062 0.34375 8.83333 0.34375 7C0.34375 5.16667 0.989583 3.60417 2.28125 2.3125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <span>Mint next</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="loader-outer">
+            <div class="loader"></div>
+        </div>
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="./assets/js/dataTables.min.js"></script>
+        <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
+        <script src="./assets/js/custom.js?v=1"></script>
+    </body>
+
+</html>

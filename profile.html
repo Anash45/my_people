@@ -129,7 +129,8 @@
                             <button class="btn btn-white menu-btn" id="menu-btn" onclick="toggleMenu()">
                                 <img src="./assets/img/menu-bars.svg" alt="Menu" class="bars-icon">
                             </button>
-                            <h2 class="page-title grostek">Dashboard</h2>
+                            <h2 class="page-title grostek">Profile <span class="text-secondary">(@h_richardson)</span>
+                            </h2>
                         </div>
                         <div class="d-flex align-items-center gap-lg-4 gap-2 ms-auto">
                             <div class="d-flex align-items-center gap-sm-2 gap-0">
@@ -186,190 +187,115 @@
             <section class="main-sec py-4">
                 <div class="container-fluid">
                     <div class="px-xl-5 gap-4 py-sm-2 px-3">
-                        <div class="d-flex align-items-center flex-wrap justify-content-between">
-                            <div class="d-flex align-items-center wallet-flex grostek">
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M10.4219 8.89844C10.6823 9.13281 10.9818 9.25 11.3203 9.25C11.6589 9.25 11.9453 9.13281 12.1797 8.89844C12.4401 8.66406 12.5703 8.36458 12.5703 8C12.5703 7.63542 12.4401 7.33594 12.1797 7.10156C11.9453 6.86719 11.6589 6.75 11.3203 6.75C10.9818 6.75 10.6823 6.86719 10.4219 7.10156C10.1875 7.33594 10.0703 7.63542 10.0703 8C10.0703 8.36458 10.1875 8.66406 10.4219 8.89844ZM8 11.3203V4.67969H16.3203V11.3203H8ZM15.5 13V13.8203C15.5 14.263 15.3307 14.6536 14.9922 14.9922C14.6536 15.3307 14.263 15.5 13.8203 15.5H2.17969C1.71094 15.5 1.30729 15.3438 0.96875 15.0312C0.65625 14.6927 0.5 14.2891 0.5 13.8203V2.17969C0.5 1.71094 0.65625 1.32031 0.96875 1.00781C1.30729 0.669271 1.71094 0.5 2.17969 0.5H13.8203C14.263 0.5 14.6536 0.669271 14.9922 1.00781C15.3307 1.34635 15.5 1.73698 15.5 2.17969V3H8C7.53125 3 7.1276 3.16927 6.78906 3.50781C6.47656 3.82031 6.32031 4.21094 6.32031 4.67969V11.3203C6.32031 11.7891 6.47656 12.1927 6.78906 12.5312C7.1276 12.8438 7.53125 13 8 13H15.5Z"
-                                        fill="#150F36" />
-                                </svg>
-                                <span>99.0018 ETH</span>
-                            </div>
-                        </div>
-                        <div class="pt-4 mt-3">
-                            <p class="mb-0 fw-bold text-dark mb-3 pb-1">New Drops for You</p>
-                            <div class="new-drops-slider">
-                                <div class="new-drop-cont">
-                                    <div class="new-drop-card">
-                                        <div class="new-drop-img">
-                                            <img src="./assets/img/new-drop-1.png" alt="New Drop">
-                                        </div>
-                                        <div class="new-drop-info">
-                                            <h6 class="new-drop-title mb-0 grostek">BoredAAP</h6>
-                                            <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
-                                        </div>
-                                        <div class="new-drop-posts">
-                                            <span>64 Posts</span>
+                        <div class="profile-flex d-flex flex-column">
+                            <div class="d-flex flex-lg-row flex-column-reverse gap-4">
+                                <div class="pf-content">
+                                    <div class="d-flex flex-column gap-2">
+                                        <span>
+                                            <img src="./assets/img/profile-pic.png" alt="Profile" class="pf-img">
+                                        </span>
+                                        <div class="d-flex flex-column">
+                                            <span class="fw-medium pf-title text-dark">Henry Richardson</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="text-dark">@h_richardson</span>
+                                                <a href="#">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M5.15625 11.3438C5.94792 12.1146 6.89583 12.5 8 12.5C9.10417 12.5 10.0417 12.1146 10.8125 11.3438C11.6042 10.5521 12 9.60417 12 8.5C12 7.39583 11.6042 6.45833 10.8125 5.6875C10.0417 4.89583 9.10417 4.5 8 4.5C6.89583 4.5 5.94792 4.89583 5.15625 5.6875C4.38542 6.45833 4 7.39583 4 8.5C4 9.60417 4.38542 10.5521 5.15625 11.3438ZM13.3438 10.7188V13.8438H10.2188L8 16.0312L5.78125 13.8438H2.65625V10.7188L0.46875 8.5L2.65625 6.28125V3.15625H5.78125L8 0.96875L10.2188 3.15625H13.3438V6.28125L15.5312 8.5L13.3438 10.7188Z"
+                                                            fill="#150F36" />
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="new-drop-cont">
-                                    <div class="new-drop-card">
-                                        <div class="new-drop-img">
-                                            <img src="./assets/img/new-drop-2.png" alt="New Drop">
-                                        </div>
-                                        <div class="new-drop-info">
-                                            <h6 class="new-drop-title mb-0 grostek">Robotz</h6>
-                                            <p class="new-drop-desc mb-0">Floor 0.02 ETH</p>
-                                        </div>
-                                        <div class="new-drop-posts">
-                                            <span>64 Posts</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="new-drop-cont">
-                                    <div class="new-drop-card">
-                                        <div class="new-drop-img">
-                                            <img src="./assets/img/new-drop-3.png" alt="New Drop">
-                                        </div>
-                                        <div class="new-drop-info">
-                                            <h6 class="new-drop-title mb-0 grostek">TravelTime</h6>
-                                            <p class="new-drop-desc mb-0">Floor 1.33 ETH</p>
-                                        </div>
-                                        <div class="new-drop-posts">
-                                            <span>64 Posts</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="new-drop-cont">
-                                    <div class="new-drop-card">
-                                        <div class="new-drop-img">
-                                            <img src="./assets/img/new-drop-1.png" alt="New Drop">
-                                        </div>
-                                        <div class="new-drop-info">
-                                            <h6 class="new-drop-title mb-0 grostek">BoredAAP</h6>
-                                            <p class="new-drop-desc mb-0">Floor 0.14 ETH</p>
-                                        </div>
-                                        <div class="new-drop-posts">
-                                            <span>64 Posts</span>
-                                        </div>
-                                    </div>
+                                <div class="pf-edit-cont ps-lg-3">
+                                    <button class="btn btn-table">Edit</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="pt-4 mt-2">
-                            <div class="dashboard-table-navs d-flex align-items-center justify-content-between">
-                                <div class="types-nav">
-                                    <button class="btn btn-nav active">Offers</button>
-                                    <button class="btn btn-nav">Collected</button>
-                                    <button class="btn btn-nav">Created</button>
+                            <div class="d-flex flex-lg-row flex-column-reverse gap-4">
+                                <div class="pf-content">
+                                    <p class="mb-0 text-dark">Welcome to the lens-captured world of Henry Richardson, a
+                                        passionate street photographer who turns ordinary city scenes world wide into
+                                        extraordinary visual stories. With a keen eye for the unnoticed, Henry's heart
+                                        beats in sync with the city's rhythm.</p>
                                 </div>
-                                <div class="range-nav">
-                                    <button class="btn btn-nav active">1H</button>
-                                    <button class="btn btn-nav">24H</button>
-                                    <button class="btn btn-nav">1W</button>
-                                    <button class="btn btn-nav">1M</button>
+                                <div class="pf-edit-cont ps-lg-3">
+                                    <button class="btn btn-table">Edit</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="pt-4">
-                            <div class="responsive">
-                                <table class="main-table table">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Offer</th>
-                                            <th>Time</th>
-                                            <th>Quantity</th>
-                                            <th>From</th>
-                                            <th class="text-white text-end">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-4">
-                                                    <img src="./assets/img/table-nft-img.png" alt="NFT"
-                                                        class="mt-nft-img">
-                                                    <div class="d-flex align-items-center gap-1 flex-wrap">
-                                                        <span class="fw-bold">NFT Title</span>
-                                                        <span class="text-secondary fw-medium">@user_name</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span>68.02 ETH</span>
-                                            </td>
-                                            <td>
-                                                <span>26m ago</span>
-                                            </td>
-                                            <td>
-                                                <span class="fw-bold">1</span>
-                                            </td>
-                                            <td>
-                                                <span class="fw-medium text-accent">@user_name</span>
-                                            </td>
-                                            <td class="text-end">
-                                                <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-4">
-                                                    <img src="./assets/img/table-nft-img.png" alt="NFT"
-                                                        class="mt-nft-img">
-                                                    <div class="d-flex align-items-center gap-1 flex-wrap">
-                                                        <span class="fw-bold">NFT Title</span>
-                                                        <span class="text-secondary fw-medium">@user_name</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span>68.02 ETH</span>
-                                            </td>
-                                            <td>
-                                                <span>26m ago</span>
-                                            </td>
-                                            <td>
-                                                <span class="fw-bold">1</span>
-                                            </td>
-                                            <td>
-                                                <span class="fw-medium text-accent">@user_name</span>
-                                            </td>
-                                            <td class="text-end">
-                                                <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-4">
-                                                    <img src="./assets/img/table-nft-img.png" alt="NFT"
-                                                        class="mt-nft-img">
-                                                    <div class="d-flex align-items-center gap-1 flex-wrap">
-                                                        <span class="fw-bold">NFT Title</span>
-                                                        <span class="text-secondary fw-medium">@user_name</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span>68.02 ETH</span>
-                                            </td>
-                                            <td>
-                                                <span>26m ago</span>
-                                            </td>
-                                            <td>
-                                                <span class="fw-bold">1</span>
-                                            </td>
-                                            <td>
-                                                <span class="fw-medium text-accent">@user_name</span>
-                                            </td>
-                                            <td class="text-end">
-                                                <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="d-flex flex-lg-row flex-column-reverse gap-4">
+                                <div class="pf-content">
+                                    <div class="pf-stats text-center gap-4 d-flex">
+                                        <div class="pf-stat d-flex flex-column">
+                                            <span class="pfs-label">Followers</span>
+                                            <span class="pfs-value fw-bold">5,656</span>
+                                        </div>
+                                        <div class="pfs-line"></div>
+                                        <div class="pf-stat d-flex flex-column">
+                                            <span class="pfs-label">Following</span>
+                                            <span class="pfs-value fw-bold">25,656</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pf-edit-cont ps-lg-3">
+                                    <button class="btn btn-table">Edit</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-lg-row flex-column-reverse gap-4">
+                                <div class="pf-content">
+                                    <div class="pf-interests">
+                                        <a href="#" class="pf-interest">Street Art</a>
+                                        <a href="#" class="pf-interest">UrbEx</a>
+                                        <a href="#" class="pf-interest">Travel</a>
+                                        <a href="#" class="pf-interest">Award-winning</a>
+                                        <a href="#" class="pf-interest">Influencer</a>
+                                    </div>
+                                </div>
+                                <div class="pf-edit-cont ps-lg-3">
+                                    <button class="btn btn-table">Edit</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-lg-row flex-column-reverse gap-4">
+                                <div class="pf-content">
+                                    <div class="d-flex pf-btns">
+                                        <a href="#" class="btn btn-sky">
+                                            <div class="btn-flex">
+                                                <span class="d-lg-block d-none">0xe007...5767f5</span>
+                                                <span>
+                                                    <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.5 0.65625C12 0.65625 12.4479 0.78125 12.8438 1.03125C13.2396 1.26042 13.5521 1.58333 13.7812 2C14.0312 2.39583 14.1562 2.84375 14.1562 3.34375V8.65625C14.1562 9.15625 14.0312 9.61458 13.7812 10.0312C13.5521 10.4271 13.2396 10.75 12.8438 11C12.4479 11.2292 12 11.3438 11.5 11.3438H3.5C3 11.3438 2.55208 11.2292 2.15625 11C1.76042 10.75 1.4375 10.4271 1.1875 10.0312C0.958333 9.61458 0.84375 9.15625 0.84375 8.65625V3.34375C0.84375 2.84375 0.958333 2.39583 1.1875 2C1.4375 1.58333 1.76042 1.26042 2.15625 1.03125C2.55208 0.78125 3 0.65625 3.5 0.65625H11.5ZM10.25 7.1875L12.5938 5.21875C12.4688 5.05208 12.3125 4.91667 12.125 4.8125C11.9375 4.70833 11.7292 4.65625 11.5 4.65625H3.5C3.22917 4.65625 2.97917 4.73958 2.75 4.90625C2.52083 5.05208 2.36458 5.25 2.28125 5.5L9.6875 7.3125C9.89583 7.375 10.0833 7.33333 10.25 7.1875ZM3.5 2C3.125 2 2.80208 2.13542 2.53125 2.40625C2.28125 2.65625 2.15625 2.96875 2.15625 3.34375V3.6875C2.36458 3.58333 2.57292 3.5 2.78125 3.4375C3.01042 3.375 3.25 3.34375 3.5 3.34375H11.5C11.75 3.34375 11.9792 3.375 12.1875 3.4375C12.4167 3.5 12.6354 3.58333 12.8438 3.6875V3.34375C12.8438 2.96875 12.7083 2.65625 12.4375 2.40625C12.1875 2.13542 11.875 2 11.5 2H3.5Z" fill="white"/>
+                                                        </svg>
+                                                        
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <a href="./inbox.html" class="btn btn-white">
+                                            <div class="btn-flex py-1">
+                                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.3438 3.34375V2L7 5.34375L1.65625 2V3.34375L7 6.65625L12.3438 3.34375ZM12.3438 0.65625C12.6979 0.65625 13 0.791667 13.25 1.0625C13.5208 1.33333 13.6562 1.64583 13.6562 2V10C13.6562 10.3542 13.5208 10.6667 13.25 10.9375C13 11.2083 12.6979 11.3438 12.3438 11.3438H1.65625C1.30208 11.3438 0.989583 11.2083 0.71875 10.9375C0.46875 10.6667 0.34375 10.3542 0.34375 10V2C0.34375 1.64583 0.46875 1.33333 0.71875 1.0625C0.989583 0.791667 1.30208 0.65625 1.65625 0.65625H12.3438Z"
+                                                        fill="#150F36" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="./dashboard.html" class="btn btn-white">
+                                            <div class="btn-flex py-1">
+                                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4 0.34375H10.6562V7H9.34375V2.59375L1.59375 10.3438L0.65625 9.40625L8.40625 1.65625H4V0.34375Z"
+                                                        fill="#150F36" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pf-edit-cont ps-lg-3">
+                                    <button class="btn btn-table">Edit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
