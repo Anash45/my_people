@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css?v=1">
+        <link rel="stylesheet" href="./assets/css/style.css?v=2">
     </head>
 
     <body class="dashboard-page">
@@ -33,7 +33,7 @@
                         </svg>
                         <span class="nav-link-text">Dashboard</span>
                     </a>
-                    <a href="./dashboard-search.html" class="nav-link">
+                    <a href="./index.html" class="nav-link">
                         <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.7188 2.78125C13.0104 4.07292 13.6562 5.64583 13.6562 7.5C13.6562 9.33333 13 10.9062 11.6875 12.2188C10.3958 13.5104 8.83333 14.1562 7 14.1562C5.16667 14.1562 3.59375 13.5104 2.28125 12.2188C0.989583 10.9062 0.34375 9.33333 0.34375 7.5C0.34375 5.66667 0.989583 4.10417 2.28125 2.8125C3.59375 1.5 5.16667 0.84375 7 0.84375H7.65625V6.34375C8.11458 6.59375 8.34375 6.97917 8.34375 7.5C8.34375 7.85417 8.20833 8.16667 7.9375 8.4375C7.66667 8.70833 7.35417 8.84375 7 8.84375C6.64583 8.84375 6.33333 8.70833 6.0625 8.4375C5.79167 8.16667 5.65625 7.85417 5.65625 7.5C5.65625 6.97917 5.88542 6.59375 6.34375 6.34375V4.9375C5.76042 5.10417 5.28125 5.41667 4.90625 5.875C4.53125 6.33333 4.34375 6.875 4.34375 7.5C4.34375 8.22917 4.60417 8.85417 5.125 9.375C5.64583 9.89583 6.27083 10.1562 7 10.1562C7.72917 10.1562 8.35417 9.89583 8.875 9.375C9.39583 8.85417 9.65625 8.22917 9.65625 7.5C9.65625 6.8125 9.39583 6.1875 8.875 5.625L9.8125 4.6875C10.6042 5.47917 11 6.41667 11 7.5C11 8.60417 10.6042 9.55208 9.8125 10.3438C9.04167 11.1146 8.10417 11.5 7 11.5C5.89583 11.5 4.94792 11.1146 4.15625 10.3438C3.38542 9.55208 3 8.60417 3 7.5C3 6.52083 3.3125 5.66667 3.9375 4.9375C4.58333 4.1875 5.38542 3.72917 6.34375 3.5625V2.21875C5.03125 2.38542 3.91667 2.96875 3 3.96875C2.10417 4.96875 1.65625 6.14583 1.65625 7.5C1.65625 8.95833 2.17708 10.2188 3.21875 11.2812C4.28125 12.3229 5.54167 12.8438 7 12.8438C8.45833 12.8438 9.70833 12.3229 10.75 11.2812C11.8125 10.2188 12.3438 8.95833 12.3438 7.5C12.3438 6.89583 12.1875 6.22917 11.875 5.5C11.5833 4.75 11.2188 4.15625 10.7812 3.71875L11.7188 2.78125Z"
@@ -92,7 +92,7 @@
             <div class="side-bottom">
                 <div class="d-flex align-items-center side-user">
                     <img src="./assets/img/profile-pic.png" alt="User" class="side-user-img">
-                    <h6 class="side-user-name mb-0">John Doe</h6>
+                    <h6 class="side-user-name mb-0">Henry Richardson</h6>
                     <div class="dropup ms-auto">
                         <span class="dropdown-toggle cursor-pointer d-block" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -383,8 +383,12 @@
                                             </div>
                                         </div>
                                         <div class="d-flex gap-3 justify-content-end mt-auto">
-                                            <a href="#" class="btn btn-white"><span class="px-3">Make offer</span></a>
-                                            <a href="#" class="btn btn-sky"><span class="px-3">Buy now</span></a>
+                                            <button type="button" class="btn btn-white"
+                                                onclick="openModal('makeOfferModal')"><span class="px-3">Make
+                                                    offer</span></button>
+                                            <button type="button" class="btn btn-sky"
+                                                onclick="openModal('buyNowModal')"><span class="px-3">Buy
+                                                    now</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -426,8 +430,8 @@
         <div class="loader-outer">
             <div class="loader"></div>
         </div>
-        <div class="modal fade" id="makeOfferModal" tabindex="-1" role="dialog"
-            aria-labelledby="makeOfferModalLabel" aria-hidden="true">
+        <div class="modal fade" id="makeOfferModal" tabindex="-1" role="dialog" aria-labelledby="makeOfferModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
@@ -446,22 +450,224 @@
                         <div class="d-flex flex-column modal-flex">
                             <div class="d-flex gap-3">
                                 <span>
-                                    <img src="./assets/" alt="" class="moda-img">
+                                    <img src="./assets/img/nft-1.png" alt="Title" class="modal-nft-img">
                                 </span>
+                                <div class="d-flex flex-column gap-1">
+                                    <span class="modal-nft-title text-dark fw-bold"> 💎💎💎 Title💎💎💎 </span>
+                                    <div class="d-flex gap-2 align-items-center dr-owner-info grostek">
+                                        <span><span class="fw-medium">Owned by</span> <span
+                                                class="text-primary fw-bold">{owner
+                                                name}</span></span><span>-</span><span
+                                            class="text-primary fw-bold">Collection name here</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-box text-dark">
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <span>Wallet balance</span>
+                                    <span>0.002 ETH</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <span>Floor price</span>
+                                    <span>0.002 ETH</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <span>Wallet balance</span>
+                                    <span>Best offer</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-4">
+                                <div class="modal-form-group">
+                                    <label class="mf-label"> Price </label>
+                                    <div class="d-flex">
+                                        <input type="text" class="form-control mf-inp" placeholder="2.18">
+                                        <select name="" id="" class="form-select mf-inp mf-inp-currency">
+                                            <option value="ETH">ETH</option>
+                                            <option value="USD">USD</option>
+                                            <option value="WON">WON</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </div>
+                                    <span class="mf-desc ps-4">$6,352.22 Total</span>
+                                </div>
+                                <div class="modal-form-group">
+                                    <label class="mf-label"> Offer deadline </label>
+                                    <div class="d-flex">
+                                        <select name="" id="" class="form-select mf-inp mf-inp-days">
+                                            <option value="1 Day">1 Day</option>
+                                            <option value="3 Days">3 Days</option>
+                                            <option value="1 Week">1 Week</option>
+                                            <option value="2 Weeks">2 Weeks</option>
+                                            <option value="1 Month">1 Month</option>
+                                            <option value="Infinite">Infinite</option>
+                                        </select>
+                                        <div
+                                            class="mf-inp cursor-pointer flex-grow-1 d-flex align-items-center gap-2 justify-content-between mf-date-time">
+                                            <span class="mf-date">Select date</span>
+                                            <input type="hidden" id="mf-date">
+                                            <input type="hidden" id="mf-time">
+                                            <span class="mf-time">Select time</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <button class="btn btn-sky w-100">Make offer</button>
+                        <button class="btn btn-sky w-100" onclick="openModal('makeOfferSuccessModal')">Make
+                            offer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade noti-modal" id="makeOfferSuccessModal" tabindex="-1" role="dialog"
+            aria-labelledby="makeOfferModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title text-dark grostek" id="makeOfferModalLabel">Offer sent successfully</h5>
+                        <button type="button" class="close bg-transparent border-0" data-dismiss="modal"
+                            aria-label="Close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.2383 1.81641L7.05469 6L11.2383 10.1836L10.1836 11.2383L6 7.05469L1.81641 11.2383L0.761719 10.1836L4.94531 6L0.761719 1.81641L1.81641 0.761719L6 4.94531L10.1836 0.761719L11.2383 1.81641Z"
+                                    fill="#150F36" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column modal-flex gap-3">
+                            <svg width="135" height="135" viewBox="0 0 135 135" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.1278 42.8215L56.3337 79.6157L36.2895 59.6273L28.417 67.4998L56.3337 95.4165L101 50.7498L93.1278 42.8215ZM67.5003 11.6665C36.6803 11.6665 11.667 36.6798 11.667 67.4998C11.667 98.3198 36.6803 123.333 67.5003 123.333C98.3203 123.333 123.334 98.3198 123.334 67.4998C123.334 36.6798 98.3203 11.6665 67.5003 11.6665ZM67.5003 112.167C42.822 112.167 22.8337 92.1782 22.8337 67.4998C22.8337 42.8215 42.822 22.8332 67.5003 22.8332C92.1787 22.8332 112.167 42.8215 112.167 67.4998C112.167 92.1782 92.1787 112.167 67.5003 112.167Z"
+                                    fill="#10B981" />
+                            </svg>
+                            <p class="mb-0 mt-4">Your offer has been sent successfully. <br> We will notify you if the
+                                owner responds to your offer, or when your offer expires.</p>
+                        </div>
+                        <button class="btn btn-white w-100" data-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="buyNowModal" tabindex="-1" role="dialog" aria-labelledby="makeOfferModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title text-dark grostek" id="makeOfferModalLabel">Buy now</h5>
+                        <button type="button" class="close bg-transparent border-0" data-dismiss="modal"
+                            aria-label="Close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.2383 1.81641L7.05469 6L11.2383 10.1836L10.1836 11.2383L6 7.05469L1.81641 11.2383L0.761719 10.1836L4.94531 6L0.761719 1.81641L1.81641 0.761719L6 4.94531L10.1836 0.761719L11.2383 1.81641Z"
+                                    fill="#150F36" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column modal-flex">
+                            <div class="d-flex gap-3">
+                                <span>
+                                    <img src="./assets/img/nft-1.png" alt="Title" class="modal-nft-img">
+                                </span>
+                                <div class="d-flex flex-column gap-1">
+                                    <span class="modal-nft-title text-dark fw-bold"> 💎💎💎 Title💎💎💎 </span>
+                                    <div class="d-flex gap-2 align-items-center dr-owner-info grostek">
+                                        <span><span class="fw-medium">Owned by</span> <span
+                                                class="text-primary fw-bold">{owner
+                                                name}</span></span><span>-</span><span
+                                            class="text-primary fw-bold">Collection name here</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-box text-dark">
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <span>Wallet balance</span>
+                                    <span>0.002 ETH</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <span>Floor price</span>
+                                    <span>0.002 ETH</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <span>Wallet balance</span>
+                                    <span>Best offer</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-4">
+                                <div class="modal-form-group">
+                                    <label class="mf-label"> Price </label>
+                                    <div class="d-flex">
+                                        <input type="text" class="form-control mf-inp" placeholder="2.18" readonly value="2.51">
+                                        <select name="" id="" class="form-select mf-inp mf-inp-currency">
+                                            <option value="ETH">ETH</option>
+                                            <option value="USD">USD</option>
+                                            <option value="WON">WON</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </div>
+                                    <span class="mf-desc ps-4">$6,352.22 Total</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sky w-100" onclick="openModal('buyNowSuccessModal')">Buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade noti-modal" id="buyNowSuccessModal" tabindex="-1" role="dialog"
+            aria-labelledby="makeOfferModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title text-dark grostek" id="makeOfferModalLabel">Purchase successful</h5>
+                        <button type="button" class="close bg-transparent border-0" data-dismiss="modal"
+                            aria-label="Close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.2383 1.81641L7.05469 6L11.2383 10.1836L10.1836 11.2383L6 7.05469L1.81641 11.2383L0.761719 10.1836L4.94531 6L0.761719 1.81641L1.81641 0.761719L6 4.94531L10.1836 0.761719L11.2383 1.81641Z"
+                                    fill="#150F36" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column modal-flex gap-3">
+                            <svg width="135" height="135" viewBox="0 0 135 135" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.1278 42.8215L56.3337 79.6157L36.2895 59.6273L28.417 67.4998L56.3337 95.4165L101 50.7498L93.1278 42.8215ZM67.5003 11.6665C36.6803 11.6665 11.667 36.6798 11.667 67.4998C11.667 98.3198 36.6803 123.333 67.5003 123.333C98.3203 123.333 123.334 98.3198 123.334 67.4998C123.334 36.6798 98.3203 11.6665 67.5003 11.6665ZM67.5003 112.167C42.822 112.167 22.8337 92.1782 22.8337 67.4998C22.8337 42.8215 42.822 22.8332 67.5003 22.8332C92.1787 22.8332 112.167 42.8215 112.167 67.4998C112.167 92.1782 92.1787 112.167 67.5003 112.167Z"
+                                    fill="#10B981" />
+                            </svg>
+                            <p class="mb-0 mt-4">Your offer has been sent successfully. <br> We will notify you if the
+                                owner responds to your offer, or when your offer expires.</p>
+                        </div>
+                        <div class="d-flex modal-btns flex-sm-nowrap flex-wrap">
+                            <button class="btn btn-white w-100" data-dismiss="modal" aria-label="Close">Close</button>
+                            <button class="btn btn-dark w-100" data-dismiss="modal" aria-label="Close">View your NFT</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <!-- Flatpickr CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <!-- Flatpickr JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="./assets/js/dataTables.min.js"></script>
         <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
-        <script src="./assets/js/custom.js?v=1"></script>
+        <script src="./assets/js/custom.js?v=2"></script>
     </body>
 
 </html>

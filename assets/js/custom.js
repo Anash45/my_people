@@ -30,12 +30,12 @@ $(document).ready(function () {
         if ($(window).width() > 992) { // If viewport height is greater than 992
             $('.fp-cards-cont').animate(
                 { scrollTop: $('.fp-cards-cont')[0].scrollHeight }, // Scroll vertically
-                8000 // 8 seconds
+                15000 // 8 seconds
             );
         } else {
             $('.fp-cards-cont').animate(
                 { scrollLeft: $('.fp-cards-cont')[0].scrollWidth }, // Scroll horizontally
-                8000 // 8 seconds
+                15000 // 8 seconds
             );
         }
     }
@@ -169,6 +169,10 @@ $(document).ready(function () {
     if($('.cwr-chat').length) {
         $('.cwr-chat').animate({ scrollTop: $('.cwr-chat')[0].scrollHeight }, 'slow');
     }
+
+    $('.minting-row .mint-card .form-check-input').change(function () {
+        checkMintSelections();
+    });
 });
 
 function showSearchForm() {
@@ -183,3 +187,69 @@ function openModal(modalId) {
     $('.modal').modal('hide');
     $(`#${modalId}`).modal('show');
 }
+
+function checkMintSelections() {
+    $('.minting-row .mint-card').each(function () {
+        let check = $(this).find('.form-check-input');
+        let card = $(this);
+        if (check.is(':checked')) {
+            card.addClass('selected');
+        } else {
+            card.removeClass('selected');
+        }
+    });
+}
+
+
+$(document).ready(function () {
+    if($('.mf-date-time').length){
+        $(".mf-date-time").on("click", function () {
+            flatpickr(".mf-date-time", {
+                enableTime: true,
+                dateFormat: "F j, Y h:i K", // November 21, 2024 8:00 AM
+                onClose: function (selectedDates, dateStr, instance) {
+                    if (selectedDates.length > 0) {
+                        // Extract the date and time separately
+                        const date = flatpickr.formatDate(selectedDates[0], "F j, Y");
+                        const time = flatpickr.formatDate(selectedDates[0], "h:i K");
+                        
+                        // Fill the respective elements
+                        $(".mf-date").text(date);
+                        $("#mf-date").val(date);
+                        $(".mf-time").text(time);
+                        $("#mf-time").val(time);
+                    }
+                },
+            }).open();
+        });
+    }
+
+    $('[data-dismiss="modal"]').on('click', function () {
+        $(this).closest('.modal').modal('hide');
+    })
+});
+
+$(document).ready(function () {
+    let previousOfferPrice = null; // To store the initial offer price
+
+    // When #receivedOfferModal is opened
+    $("#receivedOfferModal").on("show.bs.modal", function () {
+        // Save the current offer price
+        previousOfferPrice = $("#receivedOfferModal .offer-price").val(); // Assuming price is stored in data-price attribute
+        console.log("Previous offer price saved:", previousOfferPrice);
+    });
+
+    // When #offerSuccessModal is attempted to open
+    $("#offerAcceptedSuccessModal").on("show.bs.modal", function (e) {
+        const currentOfferPrice = $(".offer-price").val(); // Get the current offer price
+        console.log("Current offer price:", currentOfferPrice);
+
+        if (previousOfferPrice !== currentOfferPrice) {
+            e.preventDefault(); // Prevent the opening of #offerAcceptedSuccessModal
+            $("#negotiateOfferModal").find('.offer-price').val(currentOfferPrice);
+            $("#negotiateOfferModal").modal("show"); // Show #negotiateOfferModal
+        } else {
+            console.log("Prices match. Opening #offerAcceptedSuccessModal.");
+        }
+    });
+});
