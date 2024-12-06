@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css?v=2">
+        <link rel="stylesheet" href="./assets/css/style.css?v=3">
     </head>
 
     <body class="dashboard-page">
@@ -68,7 +68,7 @@
                             <span>28</span>
                         </span>
                     </a>
-                    <a href="./dashboard-inbox.html" class="nav-link">
+                    <a href="./inbox.html" class="nav-link">
                         <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M12.3438 2.84375V1.5L7 4.84375L1.65625 1.5V2.84375L7 6.15625L12.3438 2.84375ZM12.3438 0.15625C12.6979 0.15625 13 0.291667 13.25 0.5625C13.5208 0.833333 13.6562 1.14583 13.6562 1.5V9.5C13.6562 9.85417 13.5208 10.1667 13.25 10.4375C13 10.7083 12.6979 10.8438 12.3438 10.8438H1.65625C1.30208 10.8438 0.989583 10.7083 0.71875 10.4375C0.46875 10.1667 0.34375 9.85417 0.34375 9.5V1.5C0.34375 1.14583 0.46875 0.833333 0.71875 0.5625C0.989583 0.291667 1.30208 0.15625 1.65625 0.15625H12.3438Z"
@@ -90,12 +90,11 @@
                 </nav>
             </div>
             <div class="side-bottom">
-                <div class="d-flex align-items-center side-user">
+                <a href="./profile.html" class="d-flex align-items-center side-user">
                     <img src="./assets/img/profile-pic.png" alt="User" class="side-user-img">
                     <h6 class="side-user-name mb-0">Henry Richardson</h6>
-                    <div class="dropup ms-auto">
-                        <span class="dropdown-toggle cursor-pointer d-block" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <div class="ms-auto">
+                        <span class="cursor-pointer d-block" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg width="12" height="4" viewBox="0 0 12 4" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -103,12 +102,8 @@
                                     fill="white" />
                             </svg>
                         </span>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
                     </div>
-                </div>
+                </a>
             </div>
         </aside>
         <main>
@@ -185,7 +180,18 @@
             </header>
             <section class="main-sec py-4">
                 <div class="container-fluid">
-                    <div class="px-xl-5 gap-4 py-sm-2 px-3">
+                    <div class="px-xl-5 gap-4 py-sm-2 px-3 position-relative">
+                        <div class="alert alert-success mb-0 created-success" role="alert">
+                            <div class="d-flex align-items-center justify-content-between p-3 m-1">
+                                <span class="fw-bold">Successfully minted 6 items for @h_richardson</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.48828 11.7617L13.2383 5.01172L12.1836 3.92188L6.48828 9.61719L3.81641 6.94531L2.76172 8L6.48828 11.7617ZM2.69141 2.72656C4.16797 1.25 5.9375 0.511719 8 0.511719C10.0625 0.511719 11.8203 1.25 13.2734 2.72656C14.75 4.17969 15.4883 5.9375 15.4883 8C15.4883 10.0625 14.75 11.832 13.2734 13.3086C11.8203 14.7617 10.0625 15.4883 8 15.4883C5.9375 15.4883 4.16797 14.7617 2.69141 13.3086C1.23828 11.832 0.511719 10.0625 0.511719 8C0.511719 5.9375 1.23828 4.17969 2.69141 2.72656Z"
+                                        fill="#28BF4B" />
+                                </svg>
+                            </div>
+                        </div>
                         <div class="mt-2">
                             <div
                                 class="dashboard-table-navs d-flex align-items-center flex-wrap justify-content-between gap-3">
@@ -236,7 +242,7 @@
                             </div>
                         </div>
                         <div class="pt-3">
-                            <div class="responsive">
+                            <div class="table-responsive" id="tableCont">
                                 <table class="main-table table created-table">
                                     <thead>
                                         <tr>
@@ -269,7 +275,8 @@
                                                 <span class="fw-bold">1</span>
                                             </td>
                                             <td>
-                                                <a href="./profile.html" class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
+                                                <a href="./profile.html"
+                                                    class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
                                             </td>
                                             <td class="text-end">
                                                 <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
@@ -295,7 +302,8 @@
                                                 <span class="fw-bold">1</span>
                                             </td>
                                             <td>
-                                                <a href="./profile.html" class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
+                                                <a href="./profile.html"
+                                                    class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
                                             </td>
                                             <td class="text-end">
                                                 <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
@@ -321,7 +329,8 @@
                                                 <span class="fw-bold">1</span>
                                             </td>
                                             <td>
-                                                <a href="./profile.html" class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
+                                                <a href="./profile.html"
+                                                    class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
                                             </td>
                                             <td class="text-end">
                                                 <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
@@ -347,7 +356,8 @@
                                                 <span class="fw-bold">1</span>
                                             </td>
                                             <td>
-                                                <a href="./profile.html" class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
+                                                <a href="./profile.html"
+                                                    class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
                                             </td>
                                             <td class="text-end">
                                                 <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
@@ -373,7 +383,8 @@
                                                 <span class="fw-bold">1</span>
                                             </td>
                                             <td>
-                                                <a href="./profile.html" class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
+                                                <a href="./profile.html"
+                                                    class="fw-semibold text-primary text-decoration-none">@h_richardson</a>
                                             </td>
                                             <td class="text-end">
                                                 <a href="./dashboard-nft-details.html" class="btn btn-table">View</a>
@@ -429,7 +440,19 @@
         <script src="./assets/js/dataTables.min.js"></script>
         <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
-        <script src="./assets/js/custom.js?v=2"></script>
+        <script src="./assets/js/custom.js?v=3"></script>
+        <script>
+            // Check if url has minting=success
+
+            let urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('minting') === 'success') {
+                $('.created-success').slideDown().delay(3000).slideUp();
+                $('#tableCont').addClass('ct-success');
+                setTimeout(function () {
+                    $('#tableCont').removeClass('ct-success');
+                }, 3000);
+            }
+        </script>
     </body>
 
 </html>

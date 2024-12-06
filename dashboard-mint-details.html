@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css?v=2">
+        <link rel="stylesheet" href="./assets/css/style.css?v=3">
     </head>
 
     <body class="minting-page">
@@ -46,7 +46,7 @@
                                         <span class="d-lg-block d-none">99.0018 ETH | 1.992 WETH</span>
                                     </div>
                                 </a>
-                                <a href="./dashboard.html" class="btn btn-white ms-md-5">
+                                <button onclick="openModal('quitMinting')" class="btn btn-white ms-md-5">
                                     <div class="btn-flex py-1">
                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@
                                                 fill="#150F36" />
                                         </svg>
                                     </div>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
             <section class="main-sec py-4">
                 <div class="container">
                     <div class="gap-4 pb-sm-2">
-                        <form action="dashboard-created-success.html" method="post" class="mt-2">
+                        <form action="dashboard-created.html?minting=success" method="post" class="mt-2">
                             <div class="details-box mint-details-box mb-4 mt-5 gap-xl-0 gap-4">
                                 <div class="nft-card">
                                     <img src="./assets/img/form-page-slider-1.png" alt="NFT Image" class="fp-nc-img">
@@ -196,6 +196,29 @@
         <div class="loader-outer">
             <div class="loader"></div>
         </div>
+        
+        <div class="modal fade connect-modal" id="quitMinting" tabindex="-1" role="dialog"
+            aria-labelledby="quitMintingLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title text-dark grostek" id="quitMintingLabel">Are you sure you want to quit?
+                        </h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="p-3 m-1">
+                            <p class="text-dark fw-bold">You will lose all progress if you quit now. Do you want to
+                                proceed?</p>
+                            <div class="modal-btns d-flex">
+                                <button class="btn btn-white w-100" data-dismiss="modal"
+                                    aria-label="Close">Return</button>
+                                <a href="./dashboard.html" class="btn btn-quite w-100">Quit and lose progress</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <!-- Flatpickr CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -206,7 +229,7 @@
         <script src="./assets/js/dataTables.min.js"></script>
         <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
-        <script src="./assets/js/custom.js?v=2"></script>
+        <script src="./assets/js/custom.js?v=3"></script>
     </body>
 
 </html>

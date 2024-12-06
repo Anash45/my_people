@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 .poppins {
     font-family: "Poppins", sans-serif;
 }
 
 .grostek {
     font-family: "Space Grotesk", sans-serif;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -103,6 +106,7 @@ body {
 
 .side-user {
     gap: 10px;
+    text-decoration: none;
     display: flex;
     align-items: center;
 }
@@ -1510,14 +1514,20 @@ body:not(.form-page) header {
 .alert-success {
     background-color: rgba(234, 251, 238, 1);
     border-radius: 2px;
-    padding: 20px !important;
+    padding: 0;
     border-color: #28BF4B;
 }
 
-.ct-success,
-.ct-success td {
-    background-color: rgba(234, 251, 238, 1);
-    border-color: #28BF4B;
+.created-table table,
+.created-table table td {
+    transition: 0.3s ease-in-out;
+}
+
+.ct-success table,
+.ct-success table td {
+    background-color: rgba(234, 251, 238, 1) !important;
+    border-color: #28BF4B !important;
+    transition: 0.3s ease-in-out;
 }
 
 .loader-outer {
@@ -1959,6 +1969,87 @@ body:not(.form-page) header {
 
 .btn-success{
     background-color: #10B981 !important;
+}
+.used-pill{
+    height: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(229, 229, 229, 1);
+    padding: 0 9px;
+    border-radius: 9px;
+}
+
+.connect-modal .modal-dialog{
+    max-width: 490px !important;
+}
+
+.wallet-select{
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid #000000;
+}
+
+.connect-modal .modal-body{
+    padding: 0 !important;
+}
+.wallet-icon{
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.wallet-select:last-child{
+    border-bottom: 0;
+}
+
+.insta-logo{
+    height: 60px;
+}
+
+.insta-user-img{
+    height: 97px;
+    width: 97px;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn-insta{
+    border-radius: 2px !important;
+    font-size: 16px;
+    background-color: #4997F0 !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-color: #4997F0 !important;
+}
+
+.insta-flex{
+    padding: 80px 0 200px;
+}
+.insta-link{
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.insta-link a{
+    color: #4997F0;
+    text-decoration: none;
+}
+.btn-quite{
+    color: #9B0000;
+    background-color: #FFBDBE;
+}
+.created-success{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    display: none;
 }
 @keyframes l25 {
     100% {

@@ -253,3 +253,7 @@ $(document).ready(function () {
         }
     });
 });
+
+function connectWallet(walletName) {
+    window.location = "dashboard-nothing-with-balance.html";
+}
