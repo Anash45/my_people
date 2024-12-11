@@ -7,7 +7,7 @@
         <title>My People</title>
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css?v=3">
+        <link rel="stylesheet" href="./assets/css/style.css?v=4">
     </head>
 
     <body class="dashboard-page">
@@ -91,8 +91,7 @@
                     <img src="./assets/img/profile-pic.png" alt="User" class="side-user-img">
                     <h6 class="side-user-name mb-0">Henry Richardson</h6>
                     <div class="ms-auto">
-                        <span class="cursor-pointer d-block" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <span class="cursor-pointer d-block" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg width="12" height="4" viewBox="0 0 12 4" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -180,7 +179,8 @@
                 <div class="container-fluid d-flex flex-column justify-content-between flex-grow-1">
                     <div class="px-xl-5 gap-4 py-sm-2 d-flex flex-column justify-content-between flex-grow-1">
                         <div class="d-flex align-items-center wallet-flex grostek">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M10.4219 8.89844C10.6823 9.13281 10.9818 9.25 11.3203 9.25C11.6589 9.25 11.9453 9.13281 12.1797 8.89844C12.4401 8.66406 12.5703 8.36458 12.5703 8C12.5703 7.63542 12.4401 7.33594 12.1797 7.10156C11.9453 6.86719 11.6589 6.75 11.3203 6.75C10.9818 6.75 10.6823 6.86719 10.4219 7.10156C10.1875 7.33594 10.0703 7.63542 10.0703 8C10.0703 8.36458 10.1875 8.66406 10.4219 8.89844ZM8 11.3203V4.67969H16.3203V11.3203H8ZM15.5 13V13.8203C15.5 14.263 15.3307 14.6536 14.9922 14.9922C14.6536 15.3307 14.263 15.5 13.8203 15.5H2.17969C1.71094 15.5 1.30729 15.3438 0.96875 15.0312C0.65625 14.6927 0.5 14.2891 0.5 13.8203V2.17969C0.5 1.71094 0.65625 1.32031 0.96875 1.00781C1.30729 0.669271 1.71094 0.5 2.17969 0.5H13.8203C14.263 0.5 14.6536 0.669271 14.9922 1.00781C15.3307 1.34635 15.5 1.73698 15.5 2.17969V3H8C7.53125 3 7.1276 3.16927 6.78906 3.50781C6.47656 3.82031 6.32031 4.21094 6.32031 4.67969V11.3203C6.32031 11.7891 6.47656 12.1927 6.78906 12.5312C7.1276 12.8438 7.53125 13 8 13H15.5Z"
                                     fill="#150F36" />
@@ -193,7 +193,8 @@
                                 <h5 class="fw-medium nothing-title mb-0 grostek">Nothing to show</h5>
                                 <p class="mb-0 nothing-desc">Connect your wallet and Instagram to start.</p>
                             </div>
-                            <button type="button" class="btn btn-form-primary" onclick="openModal('connectWalletModal')">
+                            <button type="button" class="btn btn-form-primary"
+                                onclick="openModal('connectWalletModal')">
                                 <div class="d-flex align-items-center justify-content-center gap-1">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -241,7 +242,6 @@
         <div class="loader-outer">
             <div class="loader"></div>
         </div>
-        
         <div class="modal fade connect-modal" id="connectWalletModal" tabindex="-1" role="dialog"
             aria-labelledby="connectWalletModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -260,7 +260,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select" onclick="connectWallet('MetaMask')">
+                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select"
+                                onclick="openModal('metaMaskModal1')">
                                 <div class="d-flex align-items-center gap-2">
                                     <span>
                                         <img src="./assets/img/connect-1.png" alt="Wallet" class="wallet-icon">
@@ -271,7 +272,8 @@
                                     <span class="fw-medium text-secondary grostek">Last used</span>
                                 </span>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select" onclick="connectWallet('Coinbase Wallet')">
+                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select"
+                                onclick="openModal('metaMaskModal1')">
                                 <div class="d-flex align-items-center gap-2">
                                     <span>
                                         <img src="./assets/img/connect-2.png" alt="Wallet" class="wallet-icon">
@@ -279,7 +281,8 @@
                                     <span class="fw-bold grostek text-dark">Coinbase Wallet</span>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select" onclick="connectWallet('WalletConnect')">
+                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select"
+                                onclick="openModal('metaMaskModal1')">
                                 <div class="d-flex align-items-center gap-2">
                                     <span>
                                         <img src="./assets/img/connect-3.png" alt="Wallet" class="wallet-icon">
@@ -287,13 +290,148 @@
                                     <span class="fw-bold grostek text-dark">WalletConnect</span>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select" onclick="connectWallet('Trust')">
+                            <div class="d-flex align-items-center justify-content-between gap-3 wallet-select"
+                                onclick="openModal('metaMaskModal1')">
                                 <div class="d-flex align-items-center gap-2">
                                     <span>
                                         <img src="./assets/img/connect-4.png" alt="Wallet" class="wallet-icon">
                                     </span>
                                     <span class="fw-bold grostek text-dark">Trust</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade meta-mask-modal mmm inter" id="metaMaskModal1" tabindex="-1" role="dialog"
+            aria-labelledby="connectWalletModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="d-flex align-items-center gap-3 justify-content-between px-4 py-3 mmm-header">
+                        <span><img src="./assets/img/fox-logo.svg" alt="1" class="mmm-h-logo"></span>
+                        <select name="" id="" class="form-control mmm-h-select">
+                            <option value="Etherium">Etherium</option>
+                            <option value="Doge">Doge</option>
+                            <option value="Bitcoin">Bitcoin</option>
+                            <option value="USDT">USDT</option>
+                        </select>
+                    </div>
+                    <div class="modal-body px-2 text-center d-flex flex-column gap-5 pb-3">
+                        <div class="d-flex flex-column align-items-center gap-4 pt-5 px-4">
+                            <div class="d-flex flex-column gap-4 w-100 align-items-center">
+                                <div class="mb-2">
+                                    <img src="./assets/img/fox-logo.svg" alt="1" height="98">
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="lh-sm text-white mmm-title fw-bold">Welcome Back!</span>
+                                    <span class="lh-sm text-white mmm-desc fw-medium">The decentralized web
+                                        awaits</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-4 w-100 align-items-center">
+                                <div class="d-flex flex-column gap-2 w-100">
+                                    <label class="mmm-label text-start"> Password </label>
+                                    <input type="password" class="form-control mmm-inp">
+                                </div>
+                                <div class="my-2 w-100">
+                                    <button class="btn mmm-btn w-100" onclick="openModal('metaMaskModal2')">
+                                        <span>Unlock</span>
+                                    </button>
+                                </div>
+                                <p class="text-center mmm-text mb-0">
+                                    <a href="#" class="mmm-link">Forgot password?</a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-center mmm-text mb-0 text-white"> Need help? Contact <a href="#"
+                                class="mmm-link">Forgot password?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade meta-mask-modal mmm inter" id="metaMaskModal2" tabindex="-1" role="dialog"
+            aria-labelledby="connectWalletModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center d-flex flex-column gap-5 justify-content-between">
+                        <div class="d-flex flex-column gap-4 px-4 py-3">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                                    <div class="d-flex text-white fw-medium align-items-center gap-1 cursor-pointer"
+                                        onclick="openModal('metaMaskModal1')">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.1665 7.5L8.6665 4L9.489 4.8225L6.81734 7.5L9.489 10.1775L8.6665 11L5.1665 7.5Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>Back</span>
+                                    </div>
+                                    <span class="text-white fw-medium">2 of 2</span>
+                                </div>
+                                <a href="https://www.mypeople.gallery" target="_blank"
+                                    class="text-decoration-none mmm-pill d-flex justify-content-center align-items-center gap-2">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="17" cy="17" r="17" fill="#150F36" />
+                                        <path
+                                            d="M8.67509 13.0096H25.426C27.3557 13.0096 27.5068 15.083 26.699 15.8907L21.0707 21.519C19.5699 22.4838 18.3906 21.318 18.3906 20.5809V16.9628C18.1226 15.0867 16.2018 15.4217 15.5094 15.8907L9.88115 21.519C8.21946 22.5374 7.067 21.318 7 20.5809V14.7517C7 13.1972 8.11673 12.9426 8.67509 13.0096Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="fw-medium text-white">https://www.mypeople.gallery</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column gap-1 text-white text-start my-2">
+                                <h5 class="fw-bold mmm-title-2 mb-0 lh-sm">Connect to MyPeople.gallery</h5>
+                                <p class="mmm-desc-2 mb-0 lh-sm">Click to connect and agree to the Terms of Service
+                                    (mypeople.gallery/tos) and Privacy Policy (mypeople.gallery/privacy). <br><br> This
+                                    request will not trigger a blockchain transaction or cost any gas fees.</p>
+                            </div>
+                            <div class="px-2">
+                                <div class="d-flex gap-2 align-items-center text-white text-start p-3 mmm-see">
+                                    <span><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 4.56921C7 4.56921 2.73 7.67921 1 12.0692C2.73 16.4592 7 19.5692 12 19.5692C17 19.5692 21.27 16.4592 23 12.0692C21.27 7.67921 17 4.56921 12 4.56921ZM12 17.0692C9.24 17.0692 7 14.8292 7 12.0692C7 9.30921 9.24 7.06921 12 7.06921C14.76 7.06921 17 9.30921 17 12.0692C17 14.8292 14.76 17.0692 12 17.0692ZM12 9.06921C10.34 9.06921 9 10.4092 9 12.0692C9 13.7292 10.34 15.0692 12 15.0692C13.66 15.0692 15 13.7292 15 12.0692C15 10.4092 13.66 9.06921 12 9.06921Z"
+                                                fill="white" />
+                                        </svg></span>
+                                    <p class="fw-medium mb-0 lh-sm">See address, account balance, activity and suggest
+                                        transactions to approve</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <p class="text-center mmm-text mb-0 text-white"> Only connect with sites you trust. <a
+                                    href="#" class="mmm-link">Learn more</a>
+                            </p>
+                            <div class="d-flex align-items-center gap-4 px-4 py-3 mmm-bottom justify-content-between">
+                                
+                                <button class="btn mmm-btn mmm-btn-outline" data-dismiss="modal"
+                                aria-label="Close">
+                                    <span>Cancel</span>
+                                </button>
+                                <button class="btn mmm-btn" onclick="confirmConnectWallet()">
+                                    <span>Connect</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade meta-mask-modal mmm inter" id="metaMaskModal3" tabindex="-1" role="dialog"
+            aria-labelledby="connectWalletModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center d-flex flex-column gap-5 justify-content-center">
+                        <div class="d-flex flex-column gap-4 px-4 py-3 justify-content-center h-100">
+                            <div class="d-flex flex-column gap-3 align-items-center">
+                                <p class="mb-0 fw-medium text-white">Connecting...</p>
+                                <span>
+                                    <img src="./assets/img/connecting.svg" alt="Connecting" height="66">
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -307,7 +445,7 @@
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
-        <script src="./assets/js/custom.js?v=3"></script>
+        <script src="./assets/js/custom.js?v=4"></script>
     </body>
 
 </html>

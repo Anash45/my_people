@@ -254,6 +254,12 @@ $(document).ready(function () {
     });
 });
 
-function connectWallet(walletName) {
-    window.location = "dashboard-nothing-with-balance.html";
+function confirmConnectWallet() {
+    openModal('metaMaskModal3');
+    setTimeout(function () {
+        $('#metaMaskModal3').modal('hide');
+    }, 2000);
+    setTimeout(function () {
+        window.location.href = 'dashboard-nothing-with-balance.html';
+    }, 2000);
 }
